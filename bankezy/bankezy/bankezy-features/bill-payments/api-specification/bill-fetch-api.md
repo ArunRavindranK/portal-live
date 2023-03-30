@@ -22,9 +22,11 @@ Initiating channel IMEI Number
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" type="String" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" type="String" required="true" %}
@@ -47,7 +49,7 @@ OS of request initiating channel
 Unique parameters of the biller
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="customerEmailId" type="String" required="false" %}
+{% swagger-parameter in="body" name="customerEmailId" type="String" %}
 EmailId of the customer
 {% endswagger-parameter %}
 
@@ -55,27 +57,27 @@ EmailId of the customer
 User logged in mobile number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="customerName " type="String" required="false" %}
+{% swagger-parameter in="body" name="customerName " type="String" %}
 Name of the customer
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="categoryId" type="Int" required="true" %}
-Unique id of the category
+Unique id  of the category
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="operatorCode" type="String" required="false" %}
+{% swagger-parameter in="body" name="operatorCode" type="String" %}
 Short Name of the operator
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="operatorName" type="String" required="false" %}
+{% swagger-parameter in="body" name="operatorName" type="String" %}
 Name of the operator
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="serviceId" type="Int" required="false" %}
+{% swagger-parameter in="body" name="serviceId" type="Int" %}
 service Id belongs to category
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="transactionRefId" type="String" required="false" %}
+{% swagger-parameter in="body" name="transactionRefId" type="String" %}
 Unique Reference Id generated for the transaction
 {% endswagger-parameter %}
 

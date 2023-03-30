@@ -4,6 +4,8 @@ description: Credit funds into wallet
 
 # Credit Fund API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/credit/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -105,6 +107,8 @@ MOB-APP-2001
 | 38            | Wallet id is zero                                                                                                                                                  |
 | ​101          | Txn type is empty                                                                                                                                                  |
 
+
+
 {% tabs %}
 {% tab title="Sample curl command" %}
 {% code overflow="wrap" %}
@@ -119,6 +123,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/cr
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "amount": 0,

@@ -6,24 +6,30 @@ description: >-
 
 # Check status API
 
+
+
 {% swagger method="get" path="" baseUrl="<domain>/onboarding/user/auth/checkStatus/v1" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-KEYREF-VAL" required="true" %}
-Key reference value received from backend while calling
+Key reference value received from backend while calling 
 
 [save encrypyted payload api](save-encrypted-payload-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

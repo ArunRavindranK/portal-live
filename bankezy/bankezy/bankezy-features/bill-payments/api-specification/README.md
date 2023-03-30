@@ -5,7 +5,7 @@
 
 {% endswagger-description %}
 
-{% swagger-parameter in="header" required="false" %}
+{% swagger-parameter in="header" %}
 
 {% endswagger-parameter %}
 {% endswagger %}

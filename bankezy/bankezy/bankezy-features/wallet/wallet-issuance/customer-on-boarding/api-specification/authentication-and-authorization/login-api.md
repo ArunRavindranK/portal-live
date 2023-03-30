@@ -12,15 +12,19 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="keyRef" required="true" %}
-Key ref is mandatory only for
+Key ref is mandatory only for 
 
 [biometric authentication](../biometric-authentication/public-key-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="pin" required="true" %}
 If SignInMode is 1 (i.e) Pin based then 4 digit pin should be given. If SignInMode is 2 (i.e) Device based then device id should be encrypted by using
 
-[public key](../biometric-authentication/public-key-api.md)
+[ public key](../biometric-authentication/public-key-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="signInMode" required="true" %}
@@ -30,9 +34,11 @@ signInMode 2 - Device based mode
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="token" required="true" %}
-The response got from the
+The response got from the 
 
 [Get Token API](../../../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="authType" required="true" %}

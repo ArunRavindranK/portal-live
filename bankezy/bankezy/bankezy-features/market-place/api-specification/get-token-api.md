@@ -5,11 +5,19 @@ description: >-
   future communication.
 ---
 
-# Get Token Api
+# Get Token API
+
+
 
 {% swagger method="get" path="" baseUrl="/token-service/client/server/new/token" summary="" %}
 {% swagger-description %}
 This Api is used to get the token from BankEzy server.
+
+
+
+
+
+
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="referenceId " type="String" required="true" %}
@@ -20,27 +28,27 @@ Client reference ID for api call. Example value UUID
 Public key shared by BankEzy SDK to client app
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="firstname " type="String" required="false" %}
+{% swagger-parameter in="body" name="firstname " type="String" %}
 First Name of customer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="lastName " type="String" required="false" %}
+{% swagger-parameter in="body" name="lastName " type="String" %}
 Last Name of customer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="email " type="String" required="false" %}
+{% swagger-parameter in="body" name="email " type="String" %}
 Verified Email Address of customer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="isdCode " type="String" required="false" %}
+{% swagger-parameter in="body" name="isdCode " type="String" %}
 isdCode of customer country
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="mobileNumber" type="String" required="false" %}
+{% swagger-parameter in="body" name="mobileNumber" type="String" %}
 Customer Mobile number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data " type="Map<String,String> " required="false" %}
+{% swagger-parameter in="body" name="data " type="Map<String,String> " %}
 Any extra info to be required to pass
 {% endswagger-parameter %}
 
@@ -49,10 +57,10 @@ ApiKey provided by bankEzy to allow requests from sdk (provided during the onboa
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="accountNumber" type="Number" required="true" %}
-Unique to number to identify customer. Max 19 digits
+Unique to number to identify customer. Max 19 digits 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="dob" type="Number" required="false" %}
+{% swagger-parameter in="body" name="dob" type="Number" %}
 Date of birth of customer(yyyyMMdd)
 {% endswagger-parameter %}
 
@@ -119,7 +127,7 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/token-ser
 {% endtab %}
 
 {% tab title="Token request sample" %}
-Request body will contain the encrypted value of JSON String. Refer [Encryption](../../../api-reference-guide.md#payload-encryption) section.
+Request body will contain the encrypted value of JSON String. Refer [Encryption](../../api-reference-guide.md#payload-encryption) section.
 
 ```
 { 
@@ -146,7 +154,7 @@ referenceId: “ASHAGSJHGASGAH”,
 {% endtab %}
 
 {% tab title="Token response sample" %}
-Response is a string value which is encrypted version of JSON, once client decrypt the value will be output as follows.
+Response is a string value which is encrypted version of JSON, once client decrypt the value will be output as follows.&#x20;
 
 ```
 { 
@@ -160,3 +168,4 @@ serverPubKey: “ahjsgdjlhasgLDJHASHGDAHS”,
 ```
 {% endtab %}
 {% endtabs %}
+

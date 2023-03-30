@@ -12,13 +12,15 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" required="true" %}

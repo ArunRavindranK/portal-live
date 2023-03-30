@@ -6,6 +6,8 @@ description: >-
 
 # Validate Payload API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/user/auth/validatePayLoad/v1" summary="" %}
 {% swagger-description %}
 This is the sequential API for sim and device binding. API. This API will be invoked by the SMS Vendor. Below are the previous steps
@@ -24,34 +26,34 @@ mobile number of the user
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="smsbody" required="true" %}
-SMS Body
+SMS Body 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="circleid" required="false" %}
+{% swagger-parameter in="body" name="circleid" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="timestamp" required="false" %}
+{% swagger-parameter in="body" name="timestamp" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="longcode" required="false" %}
+{% swagger-parameter in="body" name="longcode" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="keyword" required="false" %}
+{% swagger-parameter in="body" name="keyword" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="subkeyword" required="false" %}
+{% swagger-parameter in="body" name="subkeyword" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="carrierid" required="false" %}
+{% swagger-parameter in="body" name="carrierid" %}
 
 {% endswagger-parameter %}
 
@@ -91,3 +93,4 @@ curl --location --request POST 'https://api-pz1.pc.enstage-sas.com/onboarding/us
 ```
 {% endtab %}
 {% endtabs %}
+

@@ -4,6 +4,8 @@ description: This API used to do authentication for netbanking transaction
 
 # Initiate Authentication API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/payments/nb/txn/auth/v1" summary="" %}
 {% swagger-description %}
 
@@ -13,7 +15,7 @@ description: This API used to do authentication for netbanking transaction
 MOB-APP-2001
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="bankCode" type="String" required="false" %}
+{% swagger-parameter in="body" name="bankCode" type="String" %}
 ​Bank Code
 {% endswagger-parameter %}
 
@@ -25,11 +27,11 @@ TOKEN
 Beneficiary bank account number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="cardData.cvv2" required="false" %}
+{% swagger-parameter in="body" name="cardData.cvv2" %}
 3 digit secured cvv number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="cardData.refId" required="false" %}
+{% swagger-parameter in="body" name="cardData.refId" %}
 card reference Id
 {% endswagger-parameter %}
 
@@ -102,7 +104,7 @@ unique identification number for the sim
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceInfo.simIDProof" required="true" %}
-sim ID proof of the deivce
+sim  ID proof of the deivce
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceInfo.simProof" required="true" %}

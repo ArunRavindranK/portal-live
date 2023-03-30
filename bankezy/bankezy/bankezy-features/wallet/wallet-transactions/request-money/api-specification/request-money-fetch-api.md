@@ -39,7 +39,7 @@ Token
 ​Virtual Address
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -113,6 +113,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/rm
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "customerId": "29",
@@ -123,6 +125,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/rm
 {% endtab %}
 
 {% tab title="Response sample" %}
+
+
 ```json
 {
   "resCode": 200,

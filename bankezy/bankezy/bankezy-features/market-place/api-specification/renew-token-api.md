@@ -6,6 +6,8 @@ description: >-
 
 # Renew Token Api
 
+
+
 {% swagger method="post" path="" baseUrl="/token-service/client/server/renewtoken" summary="This API is used to renew the token generated" %}
 {% swagger-description %}
 
@@ -90,6 +92,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/token-ser
            "expiryDate":1644822181108
            }
   }
+
 ```
 {% endtab %}
 {% endtabs %}
+

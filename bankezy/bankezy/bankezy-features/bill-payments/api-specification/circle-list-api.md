@@ -10,9 +10,11 @@ description: To fetch list of circles
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}
@@ -35,6 +37,8 @@ curl --location --request GET 'https://app9.pcdev.enstage-sas.com/retail-service
 --header 'X-API-TOKEN: eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..ZJitdRZXJMeJkxFz.PuV48dCHwNI8gt0u1p7wVo8MiLNgyC5BfCkz7Qvpn2NNzXHEgVsfhd4AAHyCq0-FpMHBd5_kR2yZw-fZ-ZQHIqgT-PUOy4H9w1OBDuw0jWfcRtPnT8BNV1bDO7OvVKBplVksyifTLIYX5zFu4HfmHXygEBvv11sL8WUVHyTH8QgLMHLu2qT7l0UBTGHD8pgcZeZAQFdEXPpkglbRVdOedUda7Am1-NSvPLch5s1vyxRNrlR--8xzlfE5munVeYp8ln6L1A.foUnrZNCjNqEcoA_6u9SOw' \
 --header 'X-API-KEY: MOB-APP-2001'
 ```
+
+
 {% endtab %}
 
 {% tab title="Response Example" %}
@@ -161,5 +165,7 @@ curl --location --request GET 'https://app9.pcdev.enstage-sas.com/retail-service
     ]
 }on
 ```
+
+
 {% endtab %}
 {% endtabs %}

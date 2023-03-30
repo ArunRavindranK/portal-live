@@ -20,7 +20,7 @@ description: >-
 ​Id (wallet Id)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -106,6 +106,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/fe
 {% endtab %}
 
 {% tab title="Response sample" %}
+
+
 ```json
 {
   "resCode": 200,

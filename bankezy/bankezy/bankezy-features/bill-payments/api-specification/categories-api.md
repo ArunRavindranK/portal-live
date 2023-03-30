@@ -6,9 +6,11 @@
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The response got from the
+The response got from the 
 
 [Get Token API](../../wallet/wallet-issuance/customer-on-boarding/common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}
@@ -59,6 +61,8 @@ curl --location --request GET 'https://app9.pcdev.enstage-sas.com/retail-service
 {% endtab %}
 
 {% tab title="Response Example" %}
+
+
 ```json
 {
   "statusCode": 200,

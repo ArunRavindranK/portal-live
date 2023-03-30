@@ -4,17 +4,19 @@ description: API to verify the KYC details of the customer with bank's system.
 
 # Verify Bank KYC API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/kyc/verifyBankKyc/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../common-apis/get-app-token-api.md)
 
@@ -65,6 +67,7 @@ curl --location --request POST '/onboarding/kyc/verifyBankKyc/v1'
 \--header 'X-API-TOKEN: token'
 \--header 'X-API-KEY: MOB-APP-2001'
 \--header 'Content-Type: text/plain' --data-raw '{ "bankCustId":"11224343434" }'
+
 ```
 {% endcode %}
 {% endtab %}

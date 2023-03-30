@@ -4,6 +4,8 @@ description: Adding Funds into users wallet
 
 # Load Money Initiation API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/orchestrate/lm/init/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -21,7 +23,7 @@ Product Type(wallet type ex: RW)
 The token got from the login API
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -104,13 +106,13 @@ curl --location --request POST '[https://payment1.pcdev.enstage-sas.com/orchestr
 
 \--data-raw'{
 
-"amount": 100,
+&#x20; "amount": 100,&#x20;
 
-"customerId": "29",
+"customerId": "29",&#x20;
 
 "kycLevel": 30,
 
-"productType": "RW"
+&#x20;"productType": "RW"&#x20;
 
 }'
 {% endtab %}

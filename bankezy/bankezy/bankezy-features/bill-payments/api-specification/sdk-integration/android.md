@@ -4,7 +4,7 @@ description: This section provides the required details for integrating the Andr
 
 # Android
 
-## Step 1: Gradle changes (App: build.gradle):
+## Step 1: Gradle changes (App: build.gradle): &#x20;
 
 ```
 android {  
@@ -21,9 +21,10 @@ dependencies {
 
 ## Step 2: Get client public key
 
-Invoke the SDK to get the client public key
+Invoke the SDK to get the client public key&#x20;
 
 ```
+
 String sdkPublicKey; 
 MarketPlaceSDK marketPlaceSDK = MarketPlaceSDK.getInstance(<Activity instance to be passed>); 
     marketPlaceSDK.startMarketPlace(new WibmoConfigResponseCallback() {
@@ -40,11 +41,13 @@ MarketPlaceSDK marketPlaceSDK = MarketPlaceSDK.getInstance(<Activity instance to
         } , <PartnerCode shared offline>); 
 ```
 
-## Step 3: Initialisation of SDK
+## Step 3: Initialisation of SDK&#x20;
 
 Fetch the token data from your server by passing the sdkPublicKey received at step 2.
 
-Create a JSON object from the response received.
+Create a JSON object from the response received. &#x20;
+
+
 
 ```
          JSONObject tokenObject = new JSONObject(); 
@@ -60,7 +63,7 @@ Create a JSON object from the response received.
           }
 ```
 
-Invoke the SDK by providing the JSON Object constructed in the previous step along with PartnerCode shared offline and the environment mode.
+Invoke the SDK by providing the JSON Object constructed in the previous step along with PartnerCode shared offline and the environment mode.&#x20;
 
 ```
 String partnerCode = <Data will be shared offine>; 
@@ -107,13 +110,13 @@ Sample code to invoke SDK with default health check span time
         }); 
 ```
 
-## SDK Status code & Description
+## SDK Status code & Description          &#x20;
 
-“000” - Success
+&#x20;        “000” - Success&#x20;
 
-“050” - Technical Error. Please retry.
+&#x20;        “050” - Technical Error. Please retry.&#x20;
 
-## Proguard changes(App: proguard-rules.pro)
+## Proguard changes(App: proguard-rules.pro)&#x20;
 
 ```
 -keep class com.enstage.wibmo.marketplacesdk.** { *; } 

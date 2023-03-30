@@ -4,23 +4,27 @@ description: This API helps to save the user credentials into BankEzy.
 
 # Save Credentials API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/user/saveCredentials/v1 " summary="" %}
 {% swagger-description %}
-This API helps to save the user credentials into BankEzy. There are two different ways of login options are there
+This API helps to save the user credentials into BankEzy. There are two different ways of login options are there&#x20;
 
-1\. Pin Based Login (4 Digit numerical value)
+&#x20;                     1\. Pin Based Login (4 Digit numerical value)
 
-2\. Device Based Login (Bio metric authentication)
+&#x20;                     2\. Device Based Login (Bio metric authentication)
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" required="true" %}
@@ -28,9 +32,11 @@ text/plain
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="keyRef" required="true" %}
-Public Key Reference to b passed for device based authentication which was shared on
+Public Key Reference to b passed for device based authentication which was shared on 
 
 [Public Key API](../biometric-authentication/public-key-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="pin" required="true" %}
@@ -47,7 +53,7 @@ Device Based Auth - encrypted device uniqueId with public key shared on [Publick
 2 - Device based authentication
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

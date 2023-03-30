@@ -12,15 +12,19 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="payLoad" required="true" %}
-encrypted payload by using
+encrypted payload by using 
 
 [public key](public-key-for-sim-and-device-verification-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}

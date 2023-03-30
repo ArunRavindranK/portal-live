@@ -4,6 +4,8 @@ description: Fetch the accounts for the customer
 
 # Fetch Accounts API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/orchestrate/fetch/accounts/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -18,14 +20,14 @@ ID (card ref #)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="lcGrouping" type="String" required="true" %}
-Linked card grouping. Accepts true or false. True returns Map (key: cardType: value : list of cards). False returns list of cards
+Linked card grouping. Accepts true or false. True  returns Map (key: cardType: value : list of cards). False returns list of cards
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN  " type="String" required="true" %}
 The token got from the login API
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

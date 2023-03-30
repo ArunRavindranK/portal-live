@@ -12,9 +12,11 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="newPin" required="true" %}

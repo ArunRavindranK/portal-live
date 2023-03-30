@@ -4,6 +4,8 @@ description: updates the nick name of Linked Account or card
 
 # Update Nick Name Api
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/orchestrate/nickname/update/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -112,14 +114,16 @@ MOB-APP-2001
 
 \--data-raw'{
 
-"nickName": "string",
+&#x20; "nickName": "string",
 
-"refId": "string"
+&#x20; "refId": "string"
 
 }'
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "nickName": "string",

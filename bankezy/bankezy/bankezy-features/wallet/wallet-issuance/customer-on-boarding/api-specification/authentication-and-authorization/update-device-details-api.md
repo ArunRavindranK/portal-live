@@ -12,68 +12,70 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceId" required="true" %}
 Unique device identifier
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="deviceModel" required="false" %}
-Model of the user device
+{% swagger-parameter in="body" name="deviceModel" %}
+Model of the user device 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fcmId" required="true" %}
 Mentioned as per document
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="clientIp" required="false" %}
+{% swagger-parameter in="body" name="clientIp" %}
 Client's IP address
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="appVersion" type="int" required="false" %}
+{% swagger-parameter in="body" name="appVersion" type="int" %}
 Version of the BankEzy Application
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="osType" required="false" %}
+{% swagger-parameter in="body" name="osType" %}
 Device of the OS either Android or iOS
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="osVersion" required="false" %}
+{% swagger-parameter in="body" name="osVersion" %}
 Version of the OS Example : 10
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="deviceMake" required="false" %}
+{% swagger-parameter in="body" name="deviceMake" %}
 Maker name of the device Eg: Samsung
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="deviceType" type="int" required="false" %}
+{% swagger-parameter in="body" name="deviceType" type="int" %}
 Type of device. Example : 1
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="netOpertaor" required="false" %}
+{% swagger-parameter in="body" name="netOpertaor" %}
 Operator name Example : bnn
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="gpsLatitude" type="float" required="false" %}
+{% swagger-parameter in="body" name="gpsLatitude" type="float" %}
+gps location of  the device
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="gpsAccuracy" type="float" %}
 gps location of the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="gpsAccuracy" type="float" required="false" %}
+{% swagger-parameter in="body" name="gpsLongitude" type="float" %}
 gps location of the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="gpsLongitude" type="float" required="false" %}
-gps location of the device
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="zipCode" required="false" %}
+{% swagger-parameter in="body" name="zipCode" %}
 zip code of the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

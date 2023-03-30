@@ -12,9 +12,11 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" type="String" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
@@ -25,7 +27,7 @@ will be shared upon onboarding api consumers (clients)
 Transaction Amount
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billerId" required="false" %}
+{% swagger-parameter in="body" name="billerId" %}
 Unique identifier of the biller
 {% endswagger-parameter %}
 
@@ -33,15 +35,15 @@ Unique identifier of the biller
 Unique identifier of the category
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="circleRefId" type="int" required="false" %}
+{% swagger-parameter in="body" name="circleRefId" type="int" %}
 To specify the circle Id of the Mobile Number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="countryCode" required="false" %}
+{% swagger-parameter in="body" name="countryCode" %}
 Region name of the biller
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="currencyCode" required="false" %}
+{% swagger-parameter in="body" name="currencyCode" %}
 Region currency of the biller
 {% endswagger-parameter %}
 
@@ -75,15 +77,15 @@ OS of request initiating channel
 Merchant Number for BankEzy
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="operatorName" required="false" %}
+{% swagger-parameter in="body" name="operatorName" %}
 Name of the mobile operator
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="operatorPrefix" required="false" %}
+{% swagger-parameter in="body" name="operatorPrefix" %}
 Prefix of the mobile operator
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="rechargeType" required="false" %}
+{% swagger-parameter in="body" name="rechargeType" %}
 Type of the recharge for mobile number
 {% endswagger-parameter %}
 
@@ -91,15 +93,15 @@ Type of the recharge for mobile number
 Unique Reference Id generated for the transaction
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="serviceId" required="false" %}
+{% swagger-parameter in="body" name="serviceId" %}
 Service id of the category
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="subscriberName" required="false" %}
+{% swagger-parameter in="body" name="subscriberName" %}
 Name of the subscriber
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="customerEmailId" required="false" %}
+{% swagger-parameter in="body" name="customerEmailId" %}
 EmailId of the customer
 {% endswagger-parameter %}
 
@@ -107,7 +109,7 @@ EmailId of the customer
 User logged in mobile number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="customerName" required="false" %}
+{% swagger-parameter in="body" name="customerName" %}
 Name of the customer
 {% endswagger-parameter %}
 

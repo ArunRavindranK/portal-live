@@ -6,9 +6,11 @@
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-token got from the
+ token got from the 
 
 [Get Token API](../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}
@@ -27,15 +29,15 @@ Unique identifier for the category
 Customer logged in Mobile Number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="limit" required="false" %}
+{% swagger-parameter in="body" name="limit" %}
 Number of records to be fetched
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="merchantAccountNo" required="false" %}
+{% swagger-parameter in="body" name="merchantAccountNo" %}
 Unique merchant Account Number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="offset" required="false" %}
+{% swagger-parameter in="body" name="offset" %}
 
 {% endswagger-parameter %}
 
@@ -78,6 +80,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   ]
 }'
 ```
+
+
 {% endtab %}
 
 {% tab title="Request Example" %}
@@ -93,6 +97,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   ]
 }
 ```
+
+
 {% endtab %}
 
 {% tab title="Response Example" %}
@@ -145,5 +151,7 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
     ]
 }js
 ```
+
+
 {% endtab %}
 {% endtabs %}

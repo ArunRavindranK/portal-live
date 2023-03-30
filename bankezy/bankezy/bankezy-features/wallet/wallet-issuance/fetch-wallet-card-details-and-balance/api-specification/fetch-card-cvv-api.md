@@ -9,7 +9,7 @@ description: Fetch the given wallet Card CVV
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="productType" type="String" required="false" %}
+{% swagger-parameter in="body" name="productType" type="String" %}
 Product Type(wallet type ex: RW)
 {% endswagger-parameter %}
 
@@ -17,7 +17,7 @@ Product Type(wallet type ex: RW)
 The token got from the login API
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="walletId" type="Int" required="false" %}
+{% swagger-parameter in="body" name="walletId" type="Int" %}
 Wallet Id (wallet unique ref #)
 {% endswagger-parameter %}
 
@@ -94,6 +94,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/fe
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "productType": "RW",
@@ -103,6 +105,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/fe
 {% endtab %}
 
 {% tab title="Response sample" %}
+
+
 ```json
 {
   "resCode": 1,

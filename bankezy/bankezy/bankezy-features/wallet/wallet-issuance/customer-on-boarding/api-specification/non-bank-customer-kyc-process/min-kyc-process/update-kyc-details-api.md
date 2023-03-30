@@ -6,19 +6,23 @@ description: >-
 
 # Update KYC Details API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/user/kyc/verifyKyc/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="dob" required="true" %}
@@ -26,13 +30,15 @@ DOB as given in the document proof (DD/MM/YYYY)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="docId" required="true" %}
-Value fetched from
+Value fetched from 
 
 [Fetch Client Rules API](fetch-client-rules-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="docValue" required="true" %}
-Document number as given in the document proof
+Document number as given in the document proof 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="email" required="true" %}
@@ -44,13 +50,15 @@ User gender
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="groupId" required="true" %}
-Value fetched from
+Value fetched from 
 
 [Fetch Client Rules API](fetch-client-rules-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="name" required="true" %}
-Name as specified in the document proof
+Name as specified in the document proof 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}

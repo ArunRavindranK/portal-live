@@ -12,36 +12,38 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceUniqueId" required="true" %}
 Unique id to identify the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="osType" required="false" %}
+{% swagger-parameter in="body" name="osType" %}
 Indicates the OS type as either Android / iOS
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="osName" required="false" %}
+{% swagger-parameter in="body" name="osName" %}
 Type of OS either Android or iOS
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="osVersion" required="false" %}
+{% swagger-parameter in="body" name="osVersion" %}
 Version of the OS Example :10
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="deviceIdType" required="false" %}
+{% swagger-parameter in="body" name="deviceIdType" %}
 Example : 3
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="deviceModel" required="false" %}
+{% swagger-parameter in="body" name="deviceModel" %}
 Model of the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

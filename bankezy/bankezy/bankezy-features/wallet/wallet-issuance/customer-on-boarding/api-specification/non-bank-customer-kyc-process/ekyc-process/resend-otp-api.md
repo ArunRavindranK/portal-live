@@ -12,17 +12,19 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="previousTraceId" required="true" %}
-TraceId from
+TraceId from 
 
 [verify Aadhar API](verify-aadhar-api.md)
 
-response
+ response
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}

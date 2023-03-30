@@ -4,6 +4,8 @@ description: To fetch linkedCards information like card details, status, balance
 
 # Fetch LinkedCards API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/lc/fetch/api/v1" summary="" %}
 {% swagger-description %}
 

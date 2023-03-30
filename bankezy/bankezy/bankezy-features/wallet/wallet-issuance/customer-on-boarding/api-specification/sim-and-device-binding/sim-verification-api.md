@@ -1,6 +1,6 @@
 # Sim verification API
 
-This API will be called while user login. If Sim Verification feature is enabled, App will call this API to enable one tap payment(ITP).
+This API will be called while user login. If Sim Verification feature is enabled, App will call this API to enable one tap payment(ITP).&#x20;
 
 For this purpose system will check if hashed device unique id is matching with the saved details. If matches system will return ITP true and put the same in user session.
 
@@ -14,16 +14,18 @@ Hashed and encrypted device unique Id
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token A](../../../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

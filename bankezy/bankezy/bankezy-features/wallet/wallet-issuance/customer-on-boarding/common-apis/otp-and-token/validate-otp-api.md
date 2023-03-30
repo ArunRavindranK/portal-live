@@ -10,9 +10,11 @@ description: This API helps to validate OTP which is entered by the user
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The response got from the
+The response got from the 
 
 [Get Token API](../get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" required="true" %}
@@ -43,7 +45,7 @@ OTP value entered by user
 Api token passed as header
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

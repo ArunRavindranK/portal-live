@@ -27,15 +27,15 @@ Merchant transaction Id
 Payment mode can be LC/NB/WC
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="bankCode" required="false" %}
+{% swagger-parameter in="body" name="bankCode" %}
 Bankcode is required is payment mode netbanking (NB)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="beneficiaryAccountNumber" required="false" %}
+{% swagger-parameter in="body" name="beneficiaryAccountNumber" %}
 Beneficiary account number is mandatory for TPV payments
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="categoryId" type="int" required="false" %}
+{% swagger-parameter in="body" name="categoryId" type="int" %}
 Merchant category
 {% endswagger-parameter %}
 

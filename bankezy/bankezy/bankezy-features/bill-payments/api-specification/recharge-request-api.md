@@ -14,9 +14,11 @@ will be shared upon onboarding api consumers (clients)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="resCode" type="String" required="true" %}
@@ -99,6 +101,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "wibmoTxnId": "2022062010010010300"
 }'
 ```
+
+
 {% endtab %}
 
 {% tab title="Request Example" %}
@@ -110,6 +114,10 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "wibmoTxnId": "2022062010010010300"
 }
 ```
+
+
+
+
 {% endtab %}
 
 {% tab title="Response Example" %}
@@ -130,5 +138,7 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
     }
 }
 ```
+
+
 {% endtab %}
 {% endtabs %}

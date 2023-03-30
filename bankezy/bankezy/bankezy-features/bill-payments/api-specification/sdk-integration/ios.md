@@ -4,18 +4,19 @@ description: This section provides the required details for integrating the iOS 
 
 # iOS
 
-## Step 1: SDK and dependencies
+## Step 1: SDK and dependencies &#x20;
 
-Include .framework library into the project\
-Name : MarketPlaceSDK.framework
+Include .framework library into the project \
+&#x20;     Name : MarketPlaceSDK.framework&#x20;
 
-General -> Frameworks -> Embed\&Sign
+&#x20;General -> Frameworks -> Embed\&Sign&#x20;
 
 ## Step 2: Get client public key
 
-Invoke the SDK to get the client public key
+Invoke the SDK to get the client public key&#x20;
 
 ```
+
 Invoke the SDK to get the Client Public key 
 Import “MarketPlaceSDK” 
 
@@ -26,11 +27,15 @@ bridge.onCertificateFetch { (publicKey, status) in
   } 
 ```
 
-## Step 3: Initialisation of SDK
+## Step 3: Initialisation of SDK&#x20;
+
+
 
 Fetch the token data from your server by passing the sdkPublicKey received at step 2.
 
-Create a JSON object from the response received.
+Create a JSON object from the response received. &#x20;
+
+
 
 ```
 // Example to create a JSON Object
@@ -50,7 +55,7 @@ let jsonData: NSData
     // JSON Data created = jsonData
 ```
 
-Invoke the SDK by providing the JSON Object constructed in the previous step along with PartnerCode shared offline and the environment mode.
+Invoke the SDK by providing the JSON Object constructed in the previous step along with PartnerCode shared offline and the environment mode.&#x20;
 
 ```
 String partnerCode = <Data will be shared offine>; 
@@ -61,17 +66,17 @@ String healthCheckSpanTime = 1800; //Optional, TimeInMilliSec
    
 ```
 
-Confirm to a protocol named WFCallbackHandler, which contains the following stubs:
+Confirm to a protocol named WFCallbackHandler, which contains the following stubs: &#x20;
 
-**onSDKInitialisationComplete** – When SDK is initialised successfully
+&#x20;**onSDKInitialisationComplete** – When SDK is initialised successfully&#x20;
 
-**onSDKInitialisationFailed** – When SDK initialisation fails
+**onSDKInitialisationFailed** – When SDK initialisation fails&#x20;
 
-**onTokenExpired** – When token is expired in SDK
+**onTokenExpired** – When token is expired in SDK&#x20;
 
 **receiveWibmoHealthCheck** – Heartbeat call back with status \[To intimate the app if the user in active]
 
-**onSDKProcessComplete** – When user exits out of Market place SDK back to Parent App
+**onSDKProcessComplete** – When user exits out of Market place SDK back to Parent App&#x20;
 
 ```
 extension ViewController:WFCallbackHandler { 
@@ -93,10 +98,10 @@ extension ViewController:WFCallbackHandler {
 } 
 ```
 
-## SDK Status code & Description
+## SDK Status code & Description          &#x20;
 
-“000” - Success
+&#x20;        “000” - Success&#x20;
 
-“050” - Technical Error. Please retry.
+&#x20;        “050” - Technical Error. Please retry.&#x20;
 
 ##

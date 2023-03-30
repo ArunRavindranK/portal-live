@@ -12,9 +12,11 @@ This API is used to enable or diable device lock after login
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceId" required="true" %}
@@ -36,13 +38,17 @@ signInMode 2 - Device based mode
 {% swagger-parameter in="body" name="pin" required="true" %}
 If SignInMode is 1 (i.e) Pin based then 4 digit pin should be given. If SignInMode is 2 (i.e) Device based then device id should be encrypted by using
 
-[public key](../biometric-authentication/public-key-api.md)
+[ public key](../biometric-authentication/public-key-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="keyRef" required="true" %}
-Key ref is mandatory only for
+Key ref is mandatory only for 
 
 [biometric authentication](../biometric-authentication/public-key-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}

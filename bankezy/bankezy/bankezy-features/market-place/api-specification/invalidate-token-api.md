@@ -90,6 +90,7 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/token-ser
            "resDesc":"Success"
            }
   }
+
 ```
 {% endtab %}
 {% endtabs %}

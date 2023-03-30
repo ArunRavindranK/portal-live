@@ -1,6 +1,6 @@
 # Device validation API
 
-This API is used to identidy whether app force update is required or not also this api tells user is using same device or new device. If the user is using new device then based on KYC level it will return authentication mode
+This API is used to identidy whether app force update is required or not also this api tells user is using same device or new device.  If the user is using new device then based on KYC level it will return authentication mode
 
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/user/deviceValidation/v1" summary="" %}
 {% swagger-description %}
@@ -20,9 +20,11 @@ Device unique id
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}

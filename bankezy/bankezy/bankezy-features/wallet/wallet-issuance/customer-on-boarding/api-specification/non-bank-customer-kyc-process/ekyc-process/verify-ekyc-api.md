@@ -10,9 +10,11 @@ description: API to verify the entered Aadhar details.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="name" required="true" %}
@@ -88,7 +90,7 @@ Address as per Aadhar document
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="traceId" required="true" %}
-This value fro previous api
+This value fro previous api 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}

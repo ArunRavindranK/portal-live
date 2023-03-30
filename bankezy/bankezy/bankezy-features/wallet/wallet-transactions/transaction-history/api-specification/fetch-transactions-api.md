@@ -6,7 +6,11 @@ description: >-
 
 # Fetch Transactions API
 
-{% swagger method="post" path="" baseUrl="<domain>/txnHistory/fetch/v1" summary="" %}
+
+
+
+
+{% swagger method="post" path="" baseUrl="<domain>/txnHistory/fetch/v1'" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -43,7 +47,7 @@ Category(Ex: LM,P2PC,P2PD)
 Transaction Status
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -118,6 +122,8 @@ https://payment1.pcdev.enstage-sas.com/txnHistory/fetch/v1'
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "fromDate": "2022-04-29",
@@ -610,5 +616,7 @@ https://payment1.pcdev.enstage-sas.com/txnHistory/fetch/v1'
   ]
 }
 ```
+
+
 {% endtab %}
 {% endtabs %}

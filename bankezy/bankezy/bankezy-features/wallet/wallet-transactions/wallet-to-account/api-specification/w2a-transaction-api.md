@@ -4,7 +4,7 @@ description: Initiating wallet to account transaction once verification successf
 
 # W2A Transaction API
 
-This API is used to initiate a wallet to account transaction.
+This API is used to initiate a wallet to account transaction.&#x20;
 
 {% swagger method="post" path="" baseUrl="<domain>/orchestrate/v1/transfer" summary="" %}
 {% swagger-description %}
@@ -112,6 +112,8 @@ curl --location --request POST 'http://localhost:8912/orchestrate/v1/transfer'
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
     "txnType": "W2A",

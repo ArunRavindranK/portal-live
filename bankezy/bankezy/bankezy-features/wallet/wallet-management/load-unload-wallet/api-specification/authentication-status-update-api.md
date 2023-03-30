@@ -6,6 +6,8 @@ description: >-
 
 # Authentication Status Update API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/orchestrate/lm/authupdate/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -32,7 +34,7 @@ Transaction Date
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="walletId" required="true" type="String" %}
-Wallet Id
+Wallet  Id
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="wibmoTxnId" required="true" type="String" %}
@@ -121,6 +123,8 @@ MOB-APP-2001
 | ​360          | Payment service not responding.. please try after some time   |
 | 365           | Credit To Wallet Failed                                       |
 | 370           | Wallet Service not responded.. Credit to wallet failed        |
+
+
 
 {% tabs %}
 {% tab title="Sample curl command" %}

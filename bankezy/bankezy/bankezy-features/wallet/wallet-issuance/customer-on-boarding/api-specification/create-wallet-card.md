@@ -12,11 +12,11 @@ description: Create Card API
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="loadAmt" type="int" required="true" %}
-Amount to be loaded
+Amount to be loaded 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="user" type="JSON" required="false" %}
-JSON of account, address and profile
+{% swagger-parameter in="body" name="user" type="JSON" %}
+JSON of account, address and profile 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="account" type="JSON" required="true" %}
@@ -54,9 +54,11 @@ and middlename
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN  " type="String" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="dob" type="String" required="true" %}
@@ -83,7 +85,7 @@ Last Name of the user
 Middle Name of the user
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -157,6 +159,8 @@ MOB-APP-2001
 {% endswagger-response %}
 {% endswagger %}
 
+
+
 {% tabs %}
 {% tab title="Sample curl command" %}
 {% code overflow="wrap" %}
@@ -166,6 +170,7 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/cr
 \--header 'X-API-TOKEN:token'
 \--header 'X-API-KEY:MOB-APP-2001'
 \--data-raw '{ "loadAmt": 0, "productType": "RW", "user": { "account": { "currency": "string" }, "address": { "addressLine": "string", "cityCode": "string", "country": "string", "zipCode": "string" }, "profile": { "dob": "12-10-2020", "email": "string", "firstName": "string", "gender": "M", "lastName": "string", "middleName": "string" } } }'
+
 ```
 {% endcode %}
 {% endtab %}
@@ -206,6 +211,10 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/cr
 {% endcode %}
 {% endtab %}
 {% endtabs %}
+
+
+
+
 
 | Custom Response code | Response description                |
 | -------------------- | ----------------------------------- |

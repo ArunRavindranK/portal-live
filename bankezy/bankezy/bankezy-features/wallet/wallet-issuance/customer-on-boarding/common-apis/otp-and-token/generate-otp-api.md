@@ -4,15 +4,19 @@ description: This API is used to generate OTP
 
 # Generate OTP API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/otp/generateOTP/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The response got from the
+The response got from the 
 
 [Get Token API](../get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" required="true" name="Content-Type" %}
@@ -27,7 +31,7 @@ text/plain
 ENROLL
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

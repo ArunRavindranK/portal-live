@@ -4,40 +4,42 @@ description: Add Beneficiary Account
 
 # Add Beneficiary API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/ac/addbeneficiary/v1" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="accountName" required="false" %}
-Account Name
+{% swagger-parameter in="body" name="accountName" %}
+Account Name 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="accountNumber" required="false" %}
+{% swagger-parameter in="body" name="accountNumber" %}
 ​Account Number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="accountType" required="false" %}
+{% swagger-parameter in="body" name="accountType" %}
 Account Type
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="bankName" required="false" %}
+{% swagger-parameter in="body" name="bankName" %}
 Bank Name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="branchName" required="false" %}
+{% swagger-parameter in="body" name="branchName" %}
 Branch Name
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="ifscCode" required="false" %}
-IFSC Code
+{% swagger-parameter in="body" name="ifscCode" %}
+IFSC Code  
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-TOKEN  " required="false" %}
+{% swagger-parameter in="header" name="X-API-TOKEN  " %}
 The token got from the login API
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

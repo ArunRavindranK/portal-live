@@ -33,7 +33,7 @@ capability
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceId" type="String" required="true" %}
-deviceId
+deviceId 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="deviceType" required="true" %}
@@ -124,7 +124,7 @@ Requestee Mobile
 Transaction Mode
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

@@ -6,19 +6,23 @@ description: >-
 
 # Save Device Details API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/userDevice/saveDeviceDetails/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" required="true" %}
@@ -41,7 +45,7 @@ Example : whatsapp
 Consent is active or not Example : 1 - active 0 - non active
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" required="false" %}
+{% swagger-parameter in="body" %}
 
 {% endswagger-parameter %}
 
@@ -54,18 +58,18 @@ Value fetched from Fetch Client Rules API
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fcmId" required="true" %}
-Google firebase id for push notification.
+Google firebase id for push notification. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="gpsAccuracy" required="false" %}
+{% swagger-parameter in="body" name="gpsAccuracy" %}
 GPS location of the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="gpsLatitude" required="false" %}
+{% swagger-parameter in="body" name="gpsLatitude" %}
 GPS location of the device
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="gpsLongitude" required="false" %}
+{% swagger-parameter in="body" name="gpsLongitude" %}
 GPS location of the device
 {% endswagger-parameter %}
 
@@ -73,7 +77,7 @@ GPS location of the device
 Type of OS either Android or iOS
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

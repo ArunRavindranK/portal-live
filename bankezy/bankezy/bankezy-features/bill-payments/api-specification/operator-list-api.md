@@ -10,7 +10,7 @@ description: To fetch list of operators based on category
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token A](../../market-place/api-specification/get-token-api.md)
 
@@ -21,7 +21,7 @@ PI
 will be shared upon onboarding api consumers (clients)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="CONTENT-TYPE" required="false" %}
+{% swagger-parameter in="header" name="CONTENT-TYPE" %}
 text/plain
 {% endswagger-parameter %}
 
@@ -46,16 +46,16 @@ Indicates the service request type like Prepaid, postpaid, DTH etc
 {% endswagger-response %}
 {% endswagger %}
 
-| Response Body      |         |                                                                   |
-| ------------------ | ------- | ----------------------------------------------------------------- |
-| statusCode         | int     | Success & Failure status Codes                                    |
-| statusDesc         | String  | Response Description                                              |
-| operatorPrefix     | String  | Indicates the short name of the operator                          |
-| operatorName       | String  | Indicates the name of the operator                                |
-| category           | String  | Name of the category                                              |
-| billFetchSupported | Boolean | Indicates whether Bill Fetch option supported or not              |
-| bbps               | Boolean | Biller type id BBPS/Non-BPPS                                      |
-| adhoc              | Boolean | Indicates whether biller supports Full payment or Partial payment |
+| Response Body      |         |                                                                     |
+| ------------------ | ------- | ------------------------------------------------------------------- |
+| statusCode         | int     | Success & Failure status Codes                                      |
+| statusDesc         | String  | Response Description                                                |
+| operatorPrefix     | String  | Indicates the short name of the operator                            |
+| operatorName       | String  | Indicates the name of the operator                                  |
+| category           | String  | Name of the category                                                |
+| billFetchSupported | Boolean | Indicates whether Bill Fetch option supported or not                |
+| bbps               | Boolean | Biller type id BBPS/Non-BPPS                                        |
+| adhoc              | Boolean | Indicates whether biller supports   Full payment or Partial payment |
 
 {% tabs %}
 {% tab title="sample curl  Request " %}
@@ -68,6 +68,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "serviceId": 1
 }'
 ```
+
+
 {% endtab %}
 
 {% tab title="Request Example" %}
@@ -76,6 +78,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "serviceId": 1
 }
 ```
+
+
 {% endtab %}
 
 {% tab title="Response Example" %}
@@ -136,5 +140,7 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
     ]
 }
 ```
+
+
 {% endtab %}
 {% endtabs %}

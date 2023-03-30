@@ -84,6 +84,10 @@ curl --location --request GET 'https://payment1.pcdev.enstage-sas.com/wallet/ac/
 {% endcode %}
 {% endtab %}
 
+{% tab title="Request sample" %}
+
+{% endtab %}
+
 {% tab title="Response sample" %}
 ```json
 {

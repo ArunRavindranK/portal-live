@@ -4,6 +4,8 @@ description: This API allows to link multiple cards passed.
 
 # Multiple card linking API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/lc/autoLinkCard/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -158,6 +160,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/lc
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "category": "lc",

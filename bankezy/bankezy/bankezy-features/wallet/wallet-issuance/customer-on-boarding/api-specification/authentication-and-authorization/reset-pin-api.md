@@ -4,19 +4,23 @@ description: If user forgots pin, user can able to reset pin by calling this API
 
 # Reset Pin API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/user/resetPin/v1" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](login-api.md)
 
-or
+ or  
 
 [Get Token API](../../../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="pin" required="true" %}
@@ -27,7 +31,7 @@ New pin
 Mode of signIn. For this api it should be 1
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -88,3 +92,4 @@ curl --location --request POST 'http://localhost:10000/onboarding/user/resetPin/
 ```
 {% endtab %}
 {% endtabs %}
+

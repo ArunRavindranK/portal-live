@@ -14,20 +14,22 @@ will be shared upon onboarding api consumers (clients)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="mobile Number" type="String" required="true" %}
 Customer Mobile Number
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="service_id" type="int" required="false" %}
+{% swagger-parameter in="body" name="service_id" type="int" %}
 To specify type of category
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="CONTENT-TYPE" required="false" %}
+{% swagger-parameter in="header" name="CONTENT-TYPE" %}
 text/plain
 {% endswagger-parameter %}
 
@@ -74,6 +76,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "serviceId": 0
 }'
 ```
+
+
 {% endtab %}
 
 {% tab title="Request Example" %}
@@ -83,6 +87,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "serviceId": 0
 }
 ```
+
+
 {% endtab %}
 
 {% tab title="Response Example" %}
@@ -101,5 +107,7 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
     }
 }
 ```
+
+
 {% endtab %}
 {% endtabs %}

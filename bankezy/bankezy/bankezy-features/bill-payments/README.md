@@ -9,4 +9,7 @@ description: >-
 
 The below diagram represents the sequence of flows for various types of bill payments.
 
-<figure><img src="../../../../.gitbook/assets/Retail Flow Diagram - BBPS Type 1 billers PK Edit.png" alt=""><figcaption><p>Bill payment</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Retail Flow Diagram - BBPS Type 1 billers PK Edit.png" alt=""><figcaption><p>Bill payment </p></figcaption></figure>
+
+
+

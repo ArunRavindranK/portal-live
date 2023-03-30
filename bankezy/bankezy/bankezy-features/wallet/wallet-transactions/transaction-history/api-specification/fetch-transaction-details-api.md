@@ -4,7 +4,9 @@ description: To fetch the transaction details
 
 # Fetch Transaction Details API
 
-{% swagger method="post" path="" baseUrl="<domain>/txnHistory/detail/v1" summary="" %}
+
+
+{% swagger method="post" path="" baseUrl="<domain>/txnHistory/detail/v1'" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -129,3 +131,6 @@ https://payment1.pcdev.enstage-sas.com/txnHistory/detail/v1'
 ```
 {% endtab %}
 {% endtabs %}
+
+
+

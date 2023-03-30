@@ -10,16 +10,18 @@ description: This API helps to return customer details
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](login-api.md)
 
-or
+ or 
 
 [Get Token API](../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

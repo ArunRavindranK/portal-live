@@ -2,6 +2,6 @@
 description: To link beneficiary bank accounts
 ---
 
-# Beneficary Bank Account Link
+# Beneficary Bank Account Link&#x20;
 
 ​

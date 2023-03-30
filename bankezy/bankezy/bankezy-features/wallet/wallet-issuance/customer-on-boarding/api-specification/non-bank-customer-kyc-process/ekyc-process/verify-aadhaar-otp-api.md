@@ -10,17 +10,19 @@ verifying otp which is sent to aadhar linked mobile number. Bankezy will send re
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="traceId" required="true" %}
-TraceId from
+TraceId from 
 
 [verify Aadhar API](verify-aadhar-api.md)
 
-response
+ response
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="otp" required="true" %}
@@ -94,6 +96,7 @@ curl --location --request POST 'http://localhost:8083/onboarding/ekyc/v1/aadhaar
 "otp": 817919,
 "traceId": "4e932354-e57d-4e67-80f2-6b669ed906cd"
 }
+
 ```
 {% endtab %}
 
@@ -129,3 +132,4 @@ curl --location --request POST 'http://localhost:8083/onboarding/ekyc/v1/aadhaar
 ```
 {% endtab %}
 {% endtabs %}
+

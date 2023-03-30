@@ -6,15 +6,19 @@ description: >-
 
 # Check Registration API
 
+
+
 {% swagger method="post" path="" baseUrl=" <domain>/onboarding/user/checkRegStatus/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="appVersion" required="true" %}
@@ -29,7 +33,7 @@ Country code Example : +91
 Unique identifier for a user provided by the user
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="moreInfo" type="boolean" required="false" %}
+{% swagger-parameter in="body" name="moreInfo" type="boolean" %}
 If additional info is required pass true
 {% endswagger-parameter %}
 
@@ -41,7 +45,7 @@ Indicates the OS type as either Android / iOS
 text/plain
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -72,6 +76,8 @@ MOB-APP-2001
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+
 
 {% tabs %}
 {% tab title="Sample curl request" %}

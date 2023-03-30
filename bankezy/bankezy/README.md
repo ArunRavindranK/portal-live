@@ -1,22 +1,28 @@
 # BankEzy
 
-BankEzy is an end-to-end Digital Financial Services Platform designed to help Banks, Fintechs, NBFC & Brands to embed and launch innovative financial products for their customers. Some of the key products supported on BankEzy are
+BankEzy is an end-to-end Digital Financial Services Platform designed to help Banks, Fintechs, NBFC & Brands to embed and launch innovative financial products for their customers. Some of the key products supported on BankEzy are&#x20;
 
-· Wallet / Prepaid
 
-· UPI
 
-· Scan & Pay
+·      Wallet / Prepaid
 
-· Marketplace
+·      UPI
 
-· Rewards & Loyalty
+·      Scan & Pay
 
-· Investments
+·      Marketplace
 
-· Lending
+·      Rewards & Loyalty
+
+·      Investments
+
+·      Lending
+
+&#x20;
 
 BankEzy platform is pre-integrated with other Wibmo Products like PG, Trident FRM, ACS, Tridentity etc. and these can additionally be availed as needed. The open architecture of the platform though allows other external products to be integrated seamlessly as well.
+
+&#x20;
 
 The below diagram gives a high-level view of the core components of BankEzy and how they can be offered to your customers.
 

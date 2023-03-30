@@ -4,6 +4,8 @@ description: 'Un-linkAccount: delete the linked card in App'
 
 # Un-linkAccount API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/lc/unlink/api/v1" summary="" %}
 {% swagger-description %}
 

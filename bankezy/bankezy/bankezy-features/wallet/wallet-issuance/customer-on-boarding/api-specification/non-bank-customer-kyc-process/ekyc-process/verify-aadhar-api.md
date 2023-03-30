@@ -12,9 +12,11 @@ Verify Aadhaar Number by generating OTP to aadhaar linked mobile number
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../authentication-and-authorization/login-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="aadhaarNumber" required="true" %}
@@ -76,6 +78,7 @@ curl --location --request POST 'http://localhost:8083/onboarding/ekyc/v1/aadhaar
   "aadhaarNumber": "123456789012",
   "userName": "abc G"
 }
+
 ```
 {% endtab %}
 

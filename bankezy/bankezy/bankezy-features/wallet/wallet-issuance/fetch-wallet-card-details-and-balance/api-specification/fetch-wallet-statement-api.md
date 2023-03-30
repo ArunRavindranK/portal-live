@@ -6,6 +6,8 @@ description: >-
 
 # Fetch Wallet Statement API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/fetch/v1/statement" summary="" %}
 {% swagger-description %}
 
@@ -15,31 +17,31 @@ description: >-
 The token got from the login API
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="emailId" required="false" %}
+{% swagger-parameter in="body" name="emailId" %}
 email Id
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="fromDate" required="false" %}
+{% swagger-parameter in="body" name="fromDate" %}
 from Date
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="programId" type="Int" required="false" %}
+{% swagger-parameter in="body" name="programId" type="Int" %}
 ​program Id
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="toDate" required="false" %}
+{% swagger-parameter in="body" name="toDate" %}
 to Date
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="userId" required="false" %}
+{% swagger-parameter in="body" name="userId" %}
 user Id
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="walletStatementId" type="Int" required="false" %}
+{% swagger-parameter in="body" name="walletStatementId" type="Int" %}
 wallet Statement Id
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="walletStatus" required="false" %}
+{% swagger-parameter in="body" name="walletStatus" %}
 wallet Status
 {% endswagger-parameter %}
 
@@ -110,6 +112,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/fe
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "emailId": "abhinav.aradhya@wibmo.com",
@@ -124,6 +128,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/fe
 {% endtab %}
 
 {% tab title="Response sample" %}
+
+
 ```json
 {
   "resCode": 200,

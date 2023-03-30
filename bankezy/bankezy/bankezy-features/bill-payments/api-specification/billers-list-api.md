@@ -4,19 +4,25 @@ description: Provides the list of billers for the given category
 
 # Billers List API
 
+
+
+
+
 {% swagger method="get" path="" baseUrl="<domain>/retail-service/billers/v1/list" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../wallet/wallet-issuance/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../wallet/wallet-issuance/customer-on-boarding/common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" %}
@@ -77,6 +83,8 @@ The category got from the Categories API
 
 {% tabs %}
 {% tab title="Response" %}
+
+
 ```json
 {
   "statusCode": 200,

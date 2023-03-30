@@ -4,18 +4,22 @@ description: By calling this API, user can logout from bankezy application.
 
 # Logout API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/onboarding/user/logout/v1" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](login-api.md)
+
+
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="signOutMode" required="false" %}
+{% swagger-parameter in="body" name="signOutMode" %}
 signOutMode 1 - Pin based mode signOutMode 2 - Device based mode
 {% endswagger-parameter %}
 
@@ -24,12 +28,14 @@ Device unique id
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="token" required="true" %}
-The response got from the
+The response got from the 
 
 [Get Token API](../../../../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

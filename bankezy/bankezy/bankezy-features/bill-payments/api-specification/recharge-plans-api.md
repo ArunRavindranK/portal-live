@@ -10,9 +10,11 @@ description: To provide availiable plans for the given operator and circle combi
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [Get Token API](../../market-place/api-specification/get-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="circleId" required="true" %}
@@ -23,7 +25,7 @@ Unique identifier of the circle
 Short code indicating the region of the operator
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="serviceId" required="false" %}
+{% swagger-parameter in="body" name="serviceId" %}
 Indicates the type of the service request
 {% endswagger-parameter %}
 
@@ -77,6 +79,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "serviceId": 0
 }'
 ```
+
+
 {% endtab %}
 
 {% tab title="Request Example" %}
@@ -87,6 +91,8 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
   "serviceId": 0
 }
 ```
+
+
 {% endtab %}
 
 {% tab title="Response Example" %}
@@ -1125,5 +1131,7 @@ curl --location --request POST 'https://app9.pcdev.enstage-sas.com/retail-servic
     ]
 }son
 ```
+
+
 {% endtab %}
 {% endtabs %}

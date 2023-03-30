@@ -6,6 +6,8 @@ description: >-
 
 # Request Money Accept confirm API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/rm/accept/confirm/v1" summary="" %}
 {% swagger-description %}
 
@@ -36,7 +38,7 @@ Credential Sub Type
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="credentialType" type="String" required="true" %}
-Credential Type
+Credential Type 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="  deviceId" type="String" required="true" %}
@@ -84,7 +86,7 @@ NPCI Transaction ID
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="reqPspRefNo" type="String" required="true" %}
-​Requirement Psp Reference Number
+​Requirement Psp Reference Number 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="simId" type="String" required="true" %}
@@ -103,7 +105,7 @@ UPI Transaction Reference Number
 The token got from the login API
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -161,6 +163,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/rm
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "appName": "string",

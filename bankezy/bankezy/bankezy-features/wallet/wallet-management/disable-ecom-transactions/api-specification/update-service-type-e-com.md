@@ -7,6 +7,8 @@ description: >-
 
 # Update Service type(e-com)
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/update/servicetype/v1" summary="" %}
 {% swagger-description %}
 
@@ -32,7 +34,7 @@ Type(Ex: E-com)
 Wallet Id (wallet unique ref #)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 
@@ -99,6 +101,8 @@ MOB-APP-2001
 | ---------- | --------------------- |
 | 300        | Service is empty      |
 | 301        | Service type is empty |
+
+
 
 {% tabs %}
 {% tab title="Sample curl command" %}

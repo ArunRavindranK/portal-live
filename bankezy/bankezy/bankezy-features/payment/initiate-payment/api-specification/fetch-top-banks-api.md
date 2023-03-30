@@ -6,6 +6,8 @@ description: >-
 
 # Fetch Top Banks API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/nb/list/topbanks" summary="" %}
 {% swagger-description %}
 

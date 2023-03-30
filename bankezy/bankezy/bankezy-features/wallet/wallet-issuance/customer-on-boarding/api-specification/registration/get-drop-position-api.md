@@ -4,18 +4,22 @@ description: Provides view on the User Journey if dropped in between the Registr
 
 # Get Drop Position API
 
+
+
 {% swagger method="get" path="" baseUrl="<domain>/onboarding/userDropout/getDropPosition/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the  
 
 [Get Token API](../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-API-KEY" required="false" %}
+{% swagger-parameter in="header" name="X-API-KEY" %}
 MOB-APP-2001
 {% endswagger-parameter %}
 

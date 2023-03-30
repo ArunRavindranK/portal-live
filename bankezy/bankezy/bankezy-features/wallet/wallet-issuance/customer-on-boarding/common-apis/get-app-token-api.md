@@ -12,15 +12,15 @@ description: >-
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="apiKey" required="true" %}
-Will be shared offline
+Will  be shared offline
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="publicKey" required="true" %}
-Key generated at client end
+Key  generated at client  end
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="secret" required="true" %}
-Will be shared offline
+Will  be shared offline
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}

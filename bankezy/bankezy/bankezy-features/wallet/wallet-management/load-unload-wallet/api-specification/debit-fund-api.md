@@ -117,6 +117,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/de
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "amount": 0,
@@ -132,6 +134,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/de
 {% endtab %}
 
 {% tab title="Response sample" %}
+
+
 ```json
 {
   "resCode": 1,

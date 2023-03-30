@@ -111,7 +111,7 @@ sim Id
 token
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="transactionNote" type="String" required="false" %}
+{% swagger-parameter in="body" name="transactionNote" type="String" %}
 ​Transaction Note
 {% endswagger-parameter %}
 
@@ -193,6 +193,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/rm
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "amount": "100",
@@ -205,6 +207,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/rm
 {% endtab %}
 
 {% tab title="Response sample" %}
+
+
 ```json
 {
   "resCode": 200,

@@ -4,6 +4,8 @@ description: Fetch the given wallet Card Balance
 
 # Fetch Card Balance API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/fetch/balance/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -113,6 +115,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/fe
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "productType": "RW",

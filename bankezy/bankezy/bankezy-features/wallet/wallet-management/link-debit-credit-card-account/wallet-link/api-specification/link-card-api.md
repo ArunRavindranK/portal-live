@@ -4,6 +4,8 @@ description: To link Debit/Credit card into BankEzy App to further use on paymen
 
 # Link-Card API
 
+
+
 {% swagger method="post" path="" baseUrl="<domain>/wallet/lc/link/api/v1" summary="" %}
 {% swagger-description %}
 
@@ -210,6 +212,8 @@ curl --location --request POST 'https://payment1.pcdev.enstage-sas.com/wallet/lc
 {% endtab %}
 
 {% tab title="Request sample" %}
+
+
 ```json
 {
   "accounts": {

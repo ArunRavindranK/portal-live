@@ -6,19 +6,23 @@ description: >-
 
 # Fetch KYC Documents API
 
+
+
 {% swagger method="get" path="" baseUrl="<domain>/onboarding/user/kyc/fetchKycDocuments/v1 " summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login API](../../authentication-and-authorization/login-api.md)
 
-or
+ or 
 
 [Get Token API](../../../common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" required="true" name="X-API-KEY" %}

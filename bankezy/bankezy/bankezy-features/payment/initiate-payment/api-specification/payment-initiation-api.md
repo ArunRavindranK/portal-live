@@ -41,55 +41,55 @@ Any description for the transaction
 Transaction type Example : IAP (InApp Payment)
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="recurringPayment" type="boolean" required="false" %}
-This value can be true if user want to enable recurring payment
+{% swagger-parameter in="body" name="recurringPayment" type="boolean" %}
+This value can be true if user want to enable recurring payment 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.subscriptionDesc" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.subscriptionDesc" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.subscriberName" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.subscriberName" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.subscriberId" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.subscriberId" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.maxAmount" type="long" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.maxAmount" type="long" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.minAmount" type="long" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.minAmount" type="long" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.variablePayment" type="boolean" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.variablePayment" type="boolean" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.topUpAmount" type="long" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.topUpAmount" type="long" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="RecurringPaymentDetails.expiryDate" required="false" %}
-If recurring payment enable. this field is mandatory.
+{% swagger-parameter in="body" name="RecurringPaymentDetails.expiryDate" %}
+If recurring payment enable. this field is mandatory. 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="CardFee.creditCard" type="long" required="false" %}
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="CardFee.debitCard" type="long" required="false" %}
+{% swagger-parameter in="body" name="CardFee.creditCard" type="long" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="CardFee.prepaidCard" type="long" required="false" %}
+{% swagger-parameter in="body" name="CardFee.debitCard" type="long" %}
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="CardFee.general" type="long" required="false" %}
+{% swagger-parameter in="body" name="CardFee.prepaidCard" type="long" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="CardFee.general" type="long" %}
 
 {% endswagger-parameter %}
 
@@ -133,9 +133,8 @@ curl --location --request POST 'http://localhost:2442/payments/txn/init/v1' \
 {% endtab %}
 
 {% tab title="Request Sample" %}
-```json
-{
-    "countryCode":"91", 
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "countryCode":"91", 
     "merchantId":"171756421435003980", 
     "merchantName":"Load Money. Merchant", 
     "merchantTxnId":"202204251412233239dW90yA8", 
@@ -145,7 +144,7 @@ curl --location --request POST 'http://localhost:2442/payments/txn/init/v1' \
     "txnDesc":"LoadMoney", 
     "txnType":"LoadMoney"
 }
-```
+</code></pre>
 {% endtab %}
 
 {% tab title="Response Sample" %}

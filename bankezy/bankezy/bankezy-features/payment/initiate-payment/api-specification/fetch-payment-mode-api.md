@@ -31,7 +31,7 @@ Saved card identification number
 If grouping is required this needs to be enabled
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="supportedPaymentMode" required="false" %}
+{% swagger-parameter in="body" name="supportedPaymentMode" %}
 String array of supported payment mode LC, WC, UPI, NB
 {% endswagger-parameter %}
 
@@ -77,9 +77,8 @@ curl --location --request POST 'http://localhost:2442/payments/mode/v1' \
 {% endtab %}
 
 {% tab title="Sample Response" %}
-```json
-{
-    "resCode": 200,
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "resCode": 200,
     "resDesc": "Account(s) fetched Successfully",
     "data": {
         "wallets": [
@@ -104,6 +103,6 @@ curl --location --request POST 'http://localhost:2442/payments/mode/v1' \
         "specificIntentEnabled": false
     }
 }
-```
+</code></pre>
 {% endtab %}
 {% endtabs %}

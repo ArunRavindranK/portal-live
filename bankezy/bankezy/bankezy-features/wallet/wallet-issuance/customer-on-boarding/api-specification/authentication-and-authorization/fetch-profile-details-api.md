@@ -6,13 +6,15 @@ description: >-
 
 # Fetch Profile Details API
 
+
+
 {% swagger method="get" path="" baseUrl="<domain>/onboarding/userProfile/fetchPortfolioDetails/v1" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
-The token got from the
+The token got from the 
 
 [login AP](login-api.md)
 

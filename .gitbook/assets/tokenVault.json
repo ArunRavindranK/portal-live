@@ -1,0 +1,3190 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \{\
+  "swagger" : "2.0",\
+  "info" : \{ \},\
+  "tags" : [ \{\
+    "name" : "CardVaultParameterServices"\
+  \}, \{\
+    "name" : "CardVaultService"\
+  \}, \{\
+    "name" : "NetworkTokenService"\
+  \} ],\
+  "schemes" : [ "http" ],\
+  "paths" : \{\
+    "/usr/cardVaultServices/v1/\{vaultId\}/uploadFile" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultParameterServices" ],\
+        "summary" : "uploadCertificate",\
+        "description" : "",\
+        "operationId" : "uploadFile",\
+        "consumes" : [ "text/html" ],\
+        "parameters" : [ \{\
+          "name" : "X-Client-Id",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "KEY-ALIAS",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "KEY-STORE",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "CONSUMER-KEY",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "PARAM-NAME",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "PARAM-TYPE",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Association-Id",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Salt",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "type" : "file"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "type" : "string"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/tokenize/\{vaultId\}" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "tokenize",\
+        "description" : "",\
+        "operationId" : "tokenize",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/TokenizeRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/createClient" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "createVault",\
+        "description" : "",\
+        "operationId" : "createClient",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/RegisterClientRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/getTokenPublicKey" : \{\
+      "get" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "getTokenPublicKey",\
+        "description" : "",\
+        "operationId" : "getTokenPublicKey",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/getDeTokenPrivateKey" : \{\
+      "get" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "getTokenPublicKey",\
+        "description" : "",\
+        "operationId" : "getDeTokenPrivateKey",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/ClientDeTokenPrivateKey"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/1/0/\{vaultId\}/tokenizeHybrid" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "tokenizeHybrid",\
+        "description" : "",\
+        "operationId" : "tokenizeHybrid",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/TokenizeRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v2/1/0/\{vaultId\}/tokenizeJWE" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "tokenizeJWE",\
+        "description" : "",\
+        "operationId" : "tokenizeJWE",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/JWEPayload"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v3/1/0/\{vaultId\}/tokenizePCI" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "tokenizePCI",\
+        "description" : "",\
+        "operationId" : "tokenizePCI",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/EncryptedData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/deTokenize" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deTokenize",\
+        "description" : "",\
+        "operationId" : "deTokenize",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeTokenRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v2/1/0/\{vaultId\}/deTokenizeDetails" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deTokenize",\
+        "description" : "",\
+        "operationId" : "deTokenizeDetails",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeTokenRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v3/1/0/\{vaultId\}/deTokenizePCIDetails" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deTokenizePCIDetails",\
+        "description" : "",\
+        "operationId" : "deTokenizePCIDetails",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeTokenRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v2/\{vaultId\}/tokenizeNAuth" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "tokenize",\
+        "description" : "",\
+        "operationId" : "tokenizeNAuth",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClient",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/TokenizeRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/TokenizeResponse"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v2/\{vaultId\}/deTokenizeNAuth" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deTokenizeNAuth",\
+        "description" : "",\
+        "operationId" : "deTokenizeNAuth",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeTokenRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/TokenData"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/deleteToken" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deleteToken",\
+        "description" : "",\
+        "operationId" : "deleteToken",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v2/1/0/\{vaultId\}/deleteToken" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deleteToken",\
+        "description" : "",\
+        "operationId" : "deleteToken_1",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/suspendToken" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "suspendToken",\
+        "description" : "",\
+        "operationId" : "suspendToken",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/unSuspendToken" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "unSuspendToken",\
+        "description" : "",\
+        "operationId" : "unSuspendToken",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/v1/\{vaultId\}/deleteBulkToken" : \{\
+      "post" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "deleteBulkToken",\
+        "description" : "",\
+        "operationId" : "deleteBulkToken",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteBulkTokens"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/DeleteBulkTokenResponse"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/getTokenData/\{vaultId\}" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "getTokenData",\
+        "description" : "",\
+        "operationId" : "getTokenData",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/TokenDataRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v3/1/0/\{vaultId\}/vts/provisionToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "provisionToken",\
+        "description" : "",\
+        "operationId" : "provisionToken",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/EncryptedData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/provisionToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "provisionToken",\
+        "description" : "",\
+        "operationId" : "provisionToken_1",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/CustomerAccountDetails"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/WibmoProvisionToken"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/deleteVisaToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "deleteVisaToken",\
+        "description" : "",\
+        "operationId" : "deleteVisaToken",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/VisaLCMRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/ErrorData"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/suspendVisaToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "suspendVisaToken",\
+        "description" : "",\
+        "operationId" : "suspendVisaToken",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/VisaLCMRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/ErrorData"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/unSuspendVisaToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "unSuspendVisaToken",\
+        "description" : "",\
+        "operationId" : "unSuspendVisaToken",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/VisaLCMRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/ErrorData"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/\{vaultId\}/merchantOnboard" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "merchantOnboard",\
+        "description" : "",\
+        "operationId" : "merchantOnboard",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/MerchantOnboardingRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/1/0/\{vaultId\}/vts/getPaymentData" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "getPaymentData",\
+        "description" : "",\
+        "operationId" : "getPaymentData",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/WibmoPaymentDataRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/1/0/\{vaultId\}/vts/getVisaCardMetaData" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "getVisaCardMetaData",\
+        "description" : "",\
+        "operationId" : "getVisaCardMetaData",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/WibmoVisaCardMetaDataRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/1/0/\{vaultId\}/vts/getVisaTokenStatus" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "getTokenStatus",\
+        "description" : "",\
+        "operationId" : "getVisaTokenStatus",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/TokenStatusRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v3/1/0/\{vaultId\}/mdes/mcTokenize" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "mcTokenize",\
+        "description" : "",\
+        "operationId" : "mcTokenize",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/EncryptedData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/mcTokenize" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "mcTokenize",\
+        "description" : "",\
+        "operationId" : "mcTokenize_1",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/CustomerAccountDetails"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/WibmoTokenResponse"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v3/1/0/\{vaultId\}/mdes/mcTransact" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "mcTransact",\
+        "description" : "",\
+        "operationId" : "mcTransact",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/TransactRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/deleteMCToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "deleteMCToken",\
+        "description" : "",\
+        "operationId" : "deleteMCToken",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/LCMRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/LCMResponse"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/suspendMCToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "suspendMCToken",\
+        "description" : "",\
+        "operationId" : "suspendMCToken",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/LCMRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/LCMResponse"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/unSuspendMCToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "unSuspendMCToken",\
+        "description" : "",\
+        "operationId" : "unSuspendMCToken",\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/LCMRequest"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "$ref" : "#/definitions/LCMResponse"\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/\{vaultId\}/getTokenPublicKey" : \{\
+      "get" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "getTokenPublicKey",\
+        "description" : "",\
+        "operationId" : "getTokenPublicKey_1",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Key",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v2/1/0/\{vaultId\}/deleteToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "deleteToken",\
+        "description" : "",\
+        "operationId" : "deleteToken_2",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/networkToken/v1/\{vaultId\}/deleteToken" : \{\
+      "post" : \{\
+        "tags" : [ "NetworkTokenService" ],\
+        "summary" : "deleteToken",\
+        "description" : "",\
+        "operationId" : "deleteToken_3",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "subClientId",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "clientApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "in" : "body",\
+          "name" : "body",\
+          "required" : false,\
+          "schema" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \} ],\
+        "responses" : \{\
+          "default" : \{\
+            "description" : "successful operation"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/int/v1/1/0/\{vaultId\}/getVaultDetails" : \{\
+      "get" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "getVaultDetails",\
+        "description" : "",\
+        "operationId" : "getVaultDetails",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "type" : "array",\
+              "items" : \{\
+                "type" : "object"\
+              \}\
+            \}\
+          \}\
+        \}\
+      \}\
+    \},\
+    "/usr/cardVault/int/v1/1/0/\{vaultId\}/getClientDetails" : \{\
+      "get" : \{\
+        "tags" : [ "CardVaultService" ],\
+        "summary" : "getClientDetails",\
+        "description" : "",\
+        "operationId" : "getClientDetails",\
+        "consumes" : [ "application/json" ],\
+        "produces" : [ "application/json" ],\
+        "parameters" : [ \{\
+          "name" : "vaultId",\
+          "in" : "path",\
+          "required" : true,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "X-Auth-Token",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultApiUser",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \}, \{\
+          "name" : "vaultApiKey",\
+          "in" : "header",\
+          "required" : false,\
+          "type" : "string"\
+        \} ],\
+        "responses" : \{\
+          "200" : \{\
+            "description" : "successful operation",\
+            "schema" : \{\
+              "type" : "array",\
+              "items" : \{\
+                "type" : "object"\
+              \}\
+            \}\
+          \}\
+        \}\
+      \}\
+    \}\
+  \},\
+  "definitions" : \{\
+    "TokenizeRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "encryptedPayload" : \{\
+          "$ref" : "#/definitions/EncryptedPayload"\
+        \},\
+        "clientReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantName" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "RegisterClientRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "businessLegalName" : \{\
+          "type" : "string"\
+        \},\
+        "websiteUrl" : \{\
+          "type" : "string"\
+        \},\
+        "publicIP" : \{\
+          "type" : "string"\
+        \},\
+        "businessPhone" : \{\
+          "type" : "string"\
+        \},\
+        "businessEmail" : \{\
+          "type" : "string"\
+        \},\
+        "tokenizationTypeSupported" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "emailStatus" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "tokenPayloadKeyUsage" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "deTokenPayloadKeyUsage" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "isNetworkTokenEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "networksEnabledForToken" : \{\
+          "type" : "string"\
+        \},\
+        "isAuthenticationEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "status" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "isHybridPayloadEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "isJWEPayloadEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "isPCIEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "isIPRestrictionEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "isSubClientAllowed" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "subClientDetails" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/SubClientDetails"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "SubClientDetails" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "subClientName" : \{\
+          "type" : "string"\
+        \},\
+        "subClientType" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "subClientPublicIP" : \{\
+          "type" : "string"\
+        \},\
+        "subClientStatus" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "subClientIPRestrictionEnabled" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \}\
+      \}\
+    \},\
+    "ClientDeTokenPrivateKey" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "privateKey" : \{\
+          "type" : "string"\
+        \},\
+        "secretKey" : \{\
+          "type" : "string"\
+        \},\
+        "errorCode" : \{\
+          "type" : "string"\
+        \},\
+        "errorDesc" : \{\
+          "type" : "string"\
+        \},\
+        "status" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "EncryptedPayload" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "encryptedData" : \{\
+          "type" : "string"\
+        \},\
+        "publicKeyFingerprint" : \{\
+          "type" : "string"\
+        \},\
+        "encryptedKey" : \{\
+          "type" : "string"\
+        \},\
+        "iv" : \{\
+          "type" : "string"\
+        \},\
+        "oaepHashingAlgorithm" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "JWEPayload" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "encryptData" : \{\
+          "type" : "string"\
+        \},\
+        "clientReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantName" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "EncryptedData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "encryptData" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "DeTokenRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "tokenPan" : \{\
+          "type" : "string"\
+        \},\
+        "mobile" : \{\
+          "type" : "string"\
+        \},\
+        "email" : \{\
+          "type" : "string"\
+        \},\
+        "clientReferenceId" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "Detail" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "location" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ErrorResponse" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "status" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "message" : \{\
+          "type" : "string"\
+        \},\
+        "reason" : \{\
+          "type" : "string"\
+        \},\
+        "detail" : \{\
+          "$ref" : "#/definitions/Detail"\
+        \}\
+      \}\
+    \},\
+    "HTTPStatusCode" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "status" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \}\
+      \}\
+    \},\
+    "MCTokenDetails" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "panUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "brandLogoAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "cardBackgroundCombinedAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "foregroundColor" : \{\
+          "type" : "string"\
+        \},\
+        "issuerName" : \{\
+          "type" : "string"\
+        \},\
+        "shortDescription" : \{\
+          "type" : "string"\
+        \},\
+        "termsAndConditionsUrl" : \{\
+          "type" : "string"\
+        \},\
+        "privacyPolicyUrl" : \{\
+          "type" : "string"\
+        \},\
+        "issuerProductConfigCode" : \{\
+          "type" : "string"\
+        \},\
+        "tokenPanSuffix" : \{\
+          "type" : "string"\
+        \},\
+        "accountPanSuffix" : \{\
+          "type" : "string"\
+        \},\
+        "tokenExpiry" : \{\
+          "type" : "string"\
+        \},\
+        "accountPanExpiry" : \{\
+          "type" : "string"\
+        \},\
+        "productCategory" : \{\
+          "type" : "string"\
+        \},\
+        "dsrpCapable" : \{\
+          "type" : "boolean"\
+        \},\
+        "supportsAuthentication" : \{\
+          "type" : "boolean"\
+        \},\
+        "decision" : \{\
+          "type" : "string"\
+        \},\
+        "customerServiceUrl" : \{\
+          "type" : "string"\
+        \},\
+        "paymentAccountReference" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ProprietaryTokenDetails" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "tokenPan" : \{\
+          "type" : "string"\
+        \},\
+        "maskedPAN" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "TokenizeResponse" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "responseHost" : \{\
+          "type" : "string"\
+        \},\
+        "responseId" : \{\
+          "type" : "string"\
+        \},\
+        "decision" : \{\
+          "type" : "string"\
+        \},\
+        "authenticationMethods" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/AuthenticationMethod"\
+          \}\
+        \},\
+        "tokenUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "panUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "productConfig" : \{\
+          "$ref" : "#/definitions/ProductConfig"\
+        \},\
+        "tokenInfo" : \{\
+          "$ref" : "#/definitions/TokenInfo"\
+        \},\
+        "tokenDetail" : \{\
+          "$ref" : "#/definitions/TokenDetail"\
+        \},\
+        "supportsAuthentication" : \{\
+          "type" : "boolean"\
+        \}\
+      \}\
+    \},\
+    "VisaTokenDetails" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "errorResponse" : \{\
+          "$ref" : "#/definitions/ErrorResponse"\
+        \},\
+        "clientDeviceID" : \{\
+          "type" : "string"\
+        \},\
+        "clientWalletAccountID" : \{\
+          "type" : "string"\
+        \},\
+        "actualCardlast4" : \{\
+          "type" : "string"\
+        \},\
+        "cvv2PrintedInd" : \{\
+          "type" : "string"\
+        \},\
+        "expDatePrintedInd" : \{\
+          "type" : "string"\
+        \},\
+        "paymentAccountReference" : \{\
+          "type" : "string"\
+        \},\
+        "merchantPresentedQR" : \{\
+          "type" : "string"\
+        \},\
+        "tokenRequestorID" : \{\
+          "type" : "string"\
+        \},\
+        "tokenReferenceID" : \{\
+          "type" : "string"\
+        \},\
+        "tokenStatus" : \{\
+          "type" : "string"\
+        \},\
+        "tokenlast4" : \{\
+          "type" : "string"\
+        \},\
+        "expiryMonth" : \{\
+          "type" : "string"\
+        \},\
+        "expiryYear" : \{\
+          "type" : "string"\
+        \},\
+        "encTokenInfo" : \{\
+          "type" : "string"\
+        \},\
+        "getvProvisionedTokenID" : \{\
+          "type" : "string"\
+        \},\
+        "getvPanEnrollmentID" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "TokenData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "vaultId" : \{\
+          "type" : "string"\
+        \},\
+        "clientId" : \{\
+          "type" : "string"\
+        \},\
+        "encryptedPayload" : \{\
+          "$ref" : "#/definitions/EncryptedPayload"\
+        \},\
+        "clientReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "tokenReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantName" : \{\
+          "type" : "string"\
+        \},\
+        "errorCode" : \{\
+          "type" : "string"\
+        \},\
+        "errorDesc" : \{\
+          "type" : "string"\
+        \},\
+        "status" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "DeleteTokenData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "clientReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "tokenPan" : \{\
+          "type" : "string"\
+        \},\
+        "tokenReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "reasonDesc" : \{\
+          "type" : "string"\
+        \},\
+        "mclcmRequest" : \{\
+          "$ref" : "#/definitions/MCLCMRequest"\
+        \},\
+        "visaLCMRequest" : \{\
+          "$ref" : "#/definitions/VisaLCMRequest"\
+        \}\
+      \}\
+    \},\
+    "MCLCMRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenUniqueReferences" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "type" : "string"\
+          \}\
+        \},\
+        "causedBy" : \{\
+          "type" : "string"\
+        \},\
+        "reason" : \{\
+          "type" : "string"\
+        \},\
+        "reasonCode" : \{\
+          "type" : "string"\
+        \},\
+        "paymentAppInstanceId" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "VisaLCMRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "getvProvisionedTokenID" : \{\
+          "type" : "string"\
+        \},\
+        "reasonCode" : \{\
+          "type" : "string"\
+        \},\
+        "reasonDesc" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "DeleteBulkTokenResponse" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "errorCode" : \{\
+          "type" : "string"\
+        \},\
+        "errorDesc" : \{\
+          "type" : "string"\
+        \},\
+        "status" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "DeleteBulkTokens" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "deleteTokenDataList" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/DeleteTokenData"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "TokenDataRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "authenticationAmount" : \{\
+          "type" : "string"\
+        \},\
+        "currencyCode" : \{\
+          "type" : "string"\
+        \},\
+        "clientPaymentDataID" : \{\
+          "type" : "string"\
+        \},\
+        "tokenReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "cardType" : \{\
+          "type" : "string"\
+        \},\
+        "tokenRequesterId" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "AidInfo" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "qVSDCData" : \{\
+          "$ref" : "#/definitions/QVSDCData"\
+        \},\
+        "appPrgrmID" : \{\
+          "type" : "string"\
+        \},\
+        "kernelIdentifier" : \{\
+          "type" : "string"\
+        \},\
+        "cardHolderNameVCPCS" : \{\
+          "type" : "string"\
+        \},\
+        "pdol" : \{\
+          "type" : "string"\
+        \},\
+        "track2DataNotDec" : \{\
+          "$ref" : "#/definitions/Track2DataNotDec"\
+        \},\
+        "applicationLabel" : \{\
+          "type" : "string"\
+        \},\
+        "aid" : \{\
+          "type" : "string"\
+        \},\
+        "priority" : \{\
+          "type" : "string"\
+        \},\
+        "cap" : \{\
+          "type" : "string"\
+        \},\
+        "CVMrequired" : \{\
+          "type" : "string"\
+        \},\
+        "ODAData" : \{\
+          "$ref" : "#/definitions/ODAData"\
+        \}\
+      \}\
+    \},\
+    "DynParams" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "api" : \{\
+          "type" : "string"\
+        \},\
+        "sc" : \{\
+          "type" : "string"\
+        \},\
+        "dki" : \{\
+          "type" : "string"\
+        \},\
+        "encKeyInfo" : \{\
+          "type" : "string"\
+        \},\
+        "maxPmts" : \{\
+          "type" : "integer",\
+          "format" : "int64"\
+        \},\
+        "keyExpTS" : \{\
+          "type" : "integer",\
+          "format" : "int64"\
+        \}\
+      \}\
+    \},\
+    "EnabledServices" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "merchantPresentedQR" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ExpirationDate" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "month" : \{\
+          "type" : "string"\
+        \},\
+        "year" : \{\
+          "type" : "string"\
+        \},\
+        "ignore02field" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "HceData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "dynParams" : \{\
+          "$ref" : "#/definitions/DynParams"\
+        \},\
+        "staticParams" : \{\
+          "$ref" : "#/definitions/StaticParams"\
+        \}\
+      \}\
+    \},\
+    "ICCPublicKeyCert" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "certificate" : \{\
+          "type" : "string"\
+        \},\
+        "exponent" : \{\
+          "type" : "string"\
+        \},\
+        "remainder" : \{\
+          "type" : "string"\
+        \},\
+        "expirationDate" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ODAData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "appFileLocator" : \{\
+          "type" : "string"\
+        \},\
+        "appProfile" : \{\
+          "type" : "string"\
+        \},\
+        "caPubKeyIndex" : \{\
+          "type" : "string"\
+        \},\
+        "iccPubKeyCert" : \{\
+          "$ref" : "#/definitions/ICCPublicKeyCert"\
+        \},\
+        "tokenBinPubKeyCert" : \{\
+          "$ref" : "#/definitions/TokenBinPublicKeyCert"\
+        \},\
+        "enciccPrivateKey" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "PaymentInstrument" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "last4" : \{\
+          "type" : "string"\
+        \},\
+        "expirationDate" : \{\
+          "$ref" : "#/definitions/ExpirationDate"\
+        \},\
+        "expDatePrintedInd" : \{\
+          "type" : "string"\
+        \},\
+        "cvv2PrintedInd" : \{\
+          "type" : "string"\
+        \},\
+        "paymentAccountReference" : \{\
+          "type" : "string"\
+        \},\
+        "enabledServices" : \{\
+          "$ref" : "#/definitions/EnabledServices"\
+        \},\
+        "ignore01field" : \{\
+          "type" : "string"\
+        \},\
+        "accountStatus" : \{\
+          "type" : "string"\
+        \},\
+        "isTokenizable" : \{\
+          "type" : "string"\
+        \},\
+        "indicators" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ProvisionResponse" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "errorResponse" : \{\
+          "$ref" : "#/definitions/ErrorResponse"\
+        \},\
+        "clientDeviceID" : \{\
+          "type" : "string"\
+        \},\
+        "clientWalletAccountID" : \{\
+          "type" : "string"\
+        \},\
+        "vpanEnrollmentID" : \{\
+          "type" : "string"\
+        \},\
+        "vProvisionedTokenID" : \{\
+          "type" : "string"\
+        \},\
+        "paymentInstrument" : \{\
+          "$ref" : "#/definitions/PaymentInstrument"\
+        \},\
+        "stepUpRequest" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/StepUpRequest"\
+          \}\
+        \},\
+        "method" : \{\
+          "type" : "string"\
+        \},\
+        "value" : \{\
+          "type" : "string"\
+        \},\
+        "source" : \{\
+          "type" : "string"\
+        \},\
+        "identifier" : \{\
+          "type" : "string"\
+        \},\
+        "requestPayload" : \{\
+          "type" : "string"\
+        \},\
+        "tokenInfo" : \{\
+          "$ref" : "#/definitions/TokenInfo"\
+        \},\
+        "dynParams" : \{\
+          "$ref" : "#/definitions/DynParams"\
+        \},\
+        "ignore00field" : \{\
+          "type" : "string"\
+        \},\
+        "vPanEnrollmentID" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "QVSDCData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "ctq" : \{\
+          "type" : "string"\
+        \},\
+        "ffi" : \{\
+          "type" : "string"\
+        \},\
+        "auc" : \{\
+          "type" : "string"\
+        \},\
+        "psn" : \{\
+          "type" : "string"\
+        \},\
+        "cvn" : \{\
+          "type" : "string"\
+        \},\
+        "digitalWalletID" : \{\
+          "type" : "string"\
+        \},\
+        "countryCode" : \{\
+          "type" : "string"\
+        \},\
+        "cid" : \{\
+          "type" : "string"\
+        \},\
+        "qVSDCWithoutODA" : \{\
+          "$ref" : "#/definitions/QVSDCWithoutODA"\
+        \}\
+      \}\
+    \},\
+    "QVSDCWithoutODA" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "afl" : \{\
+          "type" : "string"\
+        \},\
+        "aip" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "StaticParams" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "qVSDCData" : \{\
+          "$ref" : "#/definitions/QVSDCData"\
+        \},\
+        "kernelIdentifier" : \{\
+          "type" : "string"\
+        \},\
+        "cardHolderNameVCPCS" : \{\
+          "type" : "string"\
+        \},\
+        "pdol" : \{\
+          "type" : "string"\
+        \},\
+        "track2DataNotDec" : \{\
+          "$ref" : "#/definitions/Track2DataNotDec"\
+        \},\
+        "aidInfo" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/AidInfo"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "StepUpRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "method" : \{\
+          "type" : "string"\
+        \},\
+        "value" : \{\
+          "type" : "string"\
+        \},\
+        "source" : \{\
+          "type" : "string"\
+        \},\
+        "identifier" : \{\
+          "type" : "string"\
+        \},\
+        "requestPayload" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "TokenBinPublicKeyCert" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "certificate" : \{\
+          "type" : "string"\
+        \},\
+        "exponent" : \{\
+          "type" : "string"\
+        \},\
+        "remainder" : \{\
+          "type" : "string"\
+        \},\
+        "expirationDate" : \{\
+          "$ref" : "#/definitions/ExpirationDate"\
+        \}\
+      \}\
+    \},\
+    "TokenInfo" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenPanSuffix" : \{\
+          "type" : "string"\
+        \},\
+        "accountPanSuffix" : \{\
+          "type" : "string"\
+        \},\
+        "tokenExpiry" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "accountPanExpiry" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "dsrpCapable" : \{\
+          "type" : "boolean"\
+        \},\
+        "tokenAssuranceLevel" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "productCategory" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "Track2DataNotDec" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "svcCode" : \{\
+          "type" : "string"\
+        \},\
+        "pinVerField" : \{\
+          "type" : "string"\
+        \},\
+        "track2DiscData" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "WibmoProvisionToken" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "status" : \{\
+          "type" : "string"\
+        \},\
+        "errorCode" : \{\
+          "type" : "string"\
+        \},\
+        "errorDesc" : \{\
+          "type" : "string"\
+        \},\
+        "provisionResponse" : \{\
+          "$ref" : "#/definitions/ProvisionResponse"\
+        \}\
+      \}\
+    \},\
+    "CustomerAccountDetails" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "pan" : \{\
+          "type" : "string"\
+        \},\
+        "expiryMonth_MM" : \{\
+          "type" : "string"\
+        \},\
+        "expiryYear_YYYY" : \{\
+          "type" : "string"\
+        \},\
+        "securityCode" : \{\
+          "type" : "string"\
+        \},\
+        "customerName" : \{\
+          "type" : "string"\
+        \},\
+        "address1" : \{\
+          "type" : "string"\
+        \},\
+        "address2" : \{\
+          "type" : "string"\
+        \},\
+        "postalCode" : \{\
+          "type" : "string"\
+        \},\
+        "city" : \{\
+          "type" : "string"\
+        \},\
+        "state" : \{\
+          "type" : "string"\
+        \},\
+        "countryCode" : \{\
+          "type" : "string"\
+        \},\
+        "email" : \{\
+          "type" : "string"\
+        \},\
+        "mobile" : \{\
+          "type" : "string"\
+        \},\
+        "source" : \{\
+          "type" : "string"\
+        \},\
+        "clientReferenceId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantId" : \{\
+          "type" : "string"\
+        \},\
+        "merchantName" : \{\
+          "type" : "string"\
+        \},\
+        "cardType" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ErrorData" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "ErrorResponse" : \{\
+          "$ref" : "#/definitions/ErrorResponse"\
+        \}\
+      \}\
+    \},\
+    "MerchantOnboardingRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "serviceContext" : \{\
+          "type" : "string"\
+        \},\
+        "companyPrimaryLegalName" : \{\
+          "type" : "string"\
+        \},\
+        "companyPrimaryTradeName" : \{\
+          "type" : "string"\
+        \},\
+        "primaryWebsiteURL" : \{\
+          "type" : "string"\
+        \},\
+        "companyCity" : \{\
+          "type" : "string"\
+        \},\
+        "companyCountryCode" : \{\
+          "type" : "string"\
+        \},\
+        "primaryContactEmail" : \{\
+          "type" : "string"\
+        \},\
+        "businessIdentificationType" : \{\
+          "type" : "string"\
+        \},\
+        "businessIdentificationValue" : \{\
+          "type" : "string"\
+        \},\
+        "relationships" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/Relationship"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "Relationship" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "externalClientId" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "WibmoPaymentDataRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "authenticationAmount" : \{\
+          "type" : "string"\
+        \},\
+        "currencyCode" : \{\
+          "type" : "string"\
+        \},\
+        "clientPaymentDataID" : \{\
+          "type" : "string"\
+        \},\
+        "getvProvisionedTokenID" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "WibmoVisaCardMetaDataRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "getvPanEnrollmentID" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "TokenStatusRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "getvProvisionedTokenID" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "AuthenticationMethod" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "id" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "type" : \{\
+          "type" : "string"\
+        \},\
+        "value" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "ProductConfig" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "brandLogoAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "issuerLogoAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "isCoBranded" : \{\
+          "type" : "boolean"\
+        \},\
+        "coBrandName" : \{\
+          "type" : "string"\
+        \},\
+        "coBrandLogoAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "cardBackgroundCombinedAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "cardBackgroundAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "iconAssetId" : \{\
+          "type" : "string"\
+        \},\
+        "foregroundColor" : \{\
+          "type" : "string"\
+        \},\
+        "issuerName" : \{\
+          "type" : "string"\
+        \},\
+        "shortDescription" : \{\
+          "type" : "string"\
+        \},\
+        "longDescription" : \{\
+          "type" : "string"\
+        \},\
+        "customerServiceUrl" : \{\
+          "type" : "string"\
+        \},\
+        "customerServiceEmail" : \{\
+          "type" : "string"\
+        \},\
+        "customerServicePhoneNumber" : \{\
+          "type" : "string"\
+        \},\
+        "issuerMobileApp" : \{\
+          "type" : "object"\
+        \},\
+        "onlineBankingLoginUrl" : \{\
+          "type" : "string"\
+        \},\
+        "termsAndConditionsUrl" : \{\
+          "type" : "string"\
+        \},\
+        "privacyPolicyUrl" : \{\
+          "type" : "string"\
+        \},\
+        "issuerProductConfigCode" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "TokenDetail" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "publicKeyFingerprint" : \{\
+          "type" : "string"\
+        \},\
+        "encryptedKey" : \{\
+          "type" : "string"\
+        \},\
+        "oaepHashingAlgorithm" : \{\
+          "type" : "string"\
+        \},\
+        "iv" : \{\
+          "type" : "string"\
+        \},\
+        "encryptedData" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "WibmoTokenResponse" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "status" : \{\
+          "type" : "string"\
+        \},\
+        "errorCode" : \{\
+          "type" : "string"\
+        \},\
+        "errorDesc" : \{\
+          "type" : "string"\
+        \},\
+        "tokenizeResponse" : \{\
+          "$ref" : "#/definitions/TokenizeResponse"\
+        \},\
+        "paymentAccountReference" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "TransactRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "requestId" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \},\
+        "tokenUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "dsrpType" : \{\
+          "type" : "string"\
+        \},\
+        "unpredictableNumber" : \{\
+          "type" : "integer",\
+          "format" : "int32"\
+        \}\
+      \}\
+    \},\
+    "LCMResponse" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "responseHost" : \{\
+          "type" : "string"\
+        \},\
+        "responseId" : \{\
+          "type" : "string"\
+        \},\
+        "tokens" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "$ref" : "#/definitions/Token"\
+          \}\
+        \}\
+      \}\
+    \},\
+    "Token" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "tokenUniqueReference" : \{\
+          "type" : "string"\
+        \},\
+        "status" : \{\
+          "type" : "string"\
+        \},\
+        "suspendedBy" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "type" : "string"\
+          \}\
+        \},\
+        "statusTimestamp" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \},\
+    "LCMRequest" : \{\
+      "type" : "object",\
+      "properties" : \{\
+        "responseHost" : \{\
+          "type" : "string"\
+        \},\
+        "requestId" : \{\
+          "type" : "string"\
+        \},\
+        "paymentAppInstanceId" : \{\
+          "type" : "string"\
+        \},\
+        "tokenUniqueReferences" : \{\
+          "type" : "array",\
+          "items" : \{\
+            "type" : "string"\
+          \}\
+        \},\
+        "causedBy" : \{\
+          "type" : "string"\
+        \},\
+        "reason" : \{\
+          "type" : "string"\
+        \},\
+        "reasonCode" : \{\
+          "type" : "string"\
+        \}\
+      \}\
+    \}\
+  \}\
+\}\
+}

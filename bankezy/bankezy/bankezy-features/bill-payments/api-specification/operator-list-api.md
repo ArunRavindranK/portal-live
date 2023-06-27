@@ -12,7 +12,7 @@ description: To fetch list of operators based on category
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
 The token got from the 
 
-[Get Token A](../../market-place/api-specification/get-token-api.md)
+[Get Token A](../../market-place/api-specification/version-1/get-token-api.md)
 
 PI
 {% endswagger-parameter %}
@@ -45,6 +45,8 @@ Indicates the service request type like Prepaid, postpaid, DTH etc
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+## Response Details
 
 | Response Body      |         |                                                                     |
 | ------------------ | ------- | ------------------------------------------------------------------- |

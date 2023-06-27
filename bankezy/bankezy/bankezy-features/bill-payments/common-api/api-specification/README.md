@@ -1,0 +1,3 @@
+# API Specification
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Categories</td><td></td><td></td><td><a href="../../api-specification/categories-api.md">categories-api.md</a></td></tr><tr><td>Validation Init</td><td></td><td></td><td><a href="../../api-specification/validation-init-api.md">validation-init-api.md</a></td></tr><tr><td>Payment Validation</td><td></td><td></td><td><a href="../../api-specification/payment-validation-api.md">payment-validation-api.md</a></td></tr><tr><td>Transaction History</td><td></td><td></td><td><a href="../../api-specification/transaction-history-api.md">transaction-history-api.md</a></td></tr></tbody></table>

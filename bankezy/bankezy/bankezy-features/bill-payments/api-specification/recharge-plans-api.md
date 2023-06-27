@@ -12,7 +12,7 @@ description: To provide availiable plans for the given operator and circle combi
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
 The token got from the 
 
-[Get Token API](../../market-place/api-specification/get-token-api.md)
+[Get Token API](../../market-place/api-specification/version-1/get-token-api.md)
 
 
 {% endswagger-parameter %}
@@ -50,22 +50,9 @@ will be shared upon onboarding api consumers (clients)
 {% endswagger-response %}
 {% endswagger %}
 
-| Response Body       | Data Type | Field Description                                     |
-| ------------------- | --------- | ----------------------------------------------------- |
-| statusCode          | int       | status code of transaction                            |
-| statusDesc          | String    | Status Description                                    |
-| category            | String    | Name of the category                                  |
-| operatorName        | String    | Name of the operator                                  |
-| operatorId          | String    | Unique identifier for the operator                    |
-| circleName          | String    | Region of the operator                                |
-| circleId            | int       | Id indicating the region of the operator              |
-| planName            | String    | Description of the plan in detail                     |
-| amount              | String    | Transactional amount                                  |
-| validity            | String    | Validity of the plan                                  |
-| talkTime            | String    | Talktime associated with the plan                     |
-| validityDescription | String    | Description of the plan                               |
-| packageDescription  | String    | Short description of the plan                         |
-| status              | int       | Indicates whether the recharge plan is active are not |
+## Response Details
+
+<table><thead><tr><th width="176">Response Body</th><th>Data Type</th><th>Field Description</th></tr></thead><tbody><tr><td>statusCode</td><td>int</td><td>status code of transaction</td></tr><tr><td>statusDesc</td><td>String</td><td>Status Description </td></tr><tr><td>category</td><td>String</td><td>Name of the category</td></tr><tr><td>operatorName</td><td>String</td><td>Name of the operator</td></tr><tr><td>operatorId</td><td>String</td><td>Unique identifier for the operator</td></tr><tr><td>circleName</td><td>String</td><td>Region of the operator</td></tr><tr><td>circleId</td><td>int</td><td>Id indicating the region of the operator</td></tr><tr><td>planName</td><td>String</td><td>Description of the plan in detail</td></tr><tr><td>amount</td><td>String</td><td>Transactional amount</td></tr><tr><td>validity</td><td>String</td><td>Validity of the plan</td></tr><tr><td>talkTime</td><td>String</td><td>Talktime associated with the plan</td></tr><tr><td>validityDescription</td><td>String</td><td>Description of the plan</td></tr><tr><td>packageDescription</td><td>String </td><td>Short description of the plan</td></tr><tr><td>status</td><td>int</td><td>Indicates whether the recharge plan is active are not</td></tr></tbody></table>
 
 {% tabs %}
 {% tab title="sample curl  Request" %}

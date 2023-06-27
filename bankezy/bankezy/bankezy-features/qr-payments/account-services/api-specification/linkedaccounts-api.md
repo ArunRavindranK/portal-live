@@ -1,67 +1,70 @@
 ---
 description: >-
-  This API is used to take list of Accounts in the Request Body, and links them
-  to User's Accounts.
+  The purpose of this Api to amend list of user linked accounts used for QR
+  Payments.
 ---
 
 # LinkedAccounts API
 
-{% swagger method="post" path="" baseUrl="http://localhost:8911/account/v1/accounts/linkedAccounts" summary="" %}
+{% swagger method="post" path="" baseUrl="/v1/accounts/linkedAccounts" summary="" %}
 {% swagger-description %}
-Pass ArrayList of Accounts Objects in Request Body. It uses these details and populates UserAccunts, UserAccountDetails tables for a User.
-
-\
-
-
-Below, Account Object is listed for reference.
+Get the list of User accounts
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="CUSTOMER-ID" required="true" type="String" %}
+{% swagger-parameter in="header" name="X-API-TOKEN" required="true" type="String" %}
+The token got from the 
+
+[login API](../../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
+
+ or 
+
+[Get Token API](../../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
+
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-PROGRAM-ID" required="true" type="String" %}
-
+{% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
+MOB-APP-1111
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="AccountId" type="" required="true" %}
-
+Account Number
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Id" %}
-
+ID
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Status" %}
-
+Account Status
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="StatusUpdateDateTime" %}
-
+Status updated Date 
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Currency" %}
-
+Account Currency
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="AccountType" %}
-
+Account Type
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="AccountSubType" %}
-
+Account Sub Type
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Nickname" %}
-
+Account Nick Name
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="OpeningDate" %}
-
+Account Opening Date
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Account" %}
-AccountIdentification JSON
+AccountIdentification 
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -94,6 +97,8 @@ AccountIdentification JSON
 </code></pre></td><td></td></tr><tr><td><pre><code>200
 </code></pre></td><td><pre><code>SUCCESS
 </code></pre></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+
+
 
 {% tabs %}
 {% tab title="Sample cURL" %}
@@ -195,7 +200,8 @@ curl --location --request POST 'https://user4.pcdev.enstage-sas.com/kong/account
 {% tab title="Response Body" %}
 ```
 {
-    "resCode": 200
+     "resCode": "200",
+     "resDesc": "success"
 }
 ```
 {% endtab %}

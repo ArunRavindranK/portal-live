@@ -4,7 +4,7 @@ description: To Perform Recharge for the transaction
 
 # Recharge Request API
 
-{% swagger method="post" path="" baseUrl="<domain>retail-service/recharge/v1/request" summary="To Perform Recharge for the transaction" %}
+{% swagger method="post" path="recharge/v1/request" baseUrl="<domain>/retail-service/" summary="To Perform Recharge for the transaction" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -16,7 +16,7 @@ will be shared upon onboarding api consumers (clients)
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
 The token got from the 
 
-[Get Token API](../../market-place/api-specification/get-token-api.md)
+[Get Token API](../../market-place/api-specification/version-1/get-token-api.md)
 
 
 {% endswagger-parameter %}
@@ -73,6 +73,8 @@ text/plain
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+## Response Details
 
 | Response Body                        | Data Type | Field Description                                        |
 | ------------------------------------ | --------- | -------------------------------------------------------- |

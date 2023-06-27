@@ -8,7 +8,7 @@
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
 The response got from the 
 
-[Get Token API](../../wallet/wallet-issuance/customer-on-boarding/common-apis/get-app-token-api.md)
+[Get Token API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
 
 
 {% endswagger-parameter %}
@@ -41,6 +41,8 @@ will be shared upon onboarding api consumers (clients)
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+## Response Details
 
 | Response Body     | Data Type | Field Description                                                  |
 | ----------------- | --------- | ------------------------------------------------------------------ |

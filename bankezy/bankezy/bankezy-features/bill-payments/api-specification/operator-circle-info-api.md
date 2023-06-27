@@ -16,7 +16,7 @@ will be shared upon onboarding api consumers (clients)
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
 The token got from the 
 
-[Get Token API](../../market-place/api-specification/get-token-api.md)
+[Get Token API](../../market-place/api-specification/version-1/get-token-api.md)
 
 
 {% endswagger-parameter %}

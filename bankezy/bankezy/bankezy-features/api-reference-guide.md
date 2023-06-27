@@ -8,7 +8,7 @@ description: >-
 
 ## **API Authentication**
 
-****
+
 
 **X-API-KEY header to be added**&#x20;
 

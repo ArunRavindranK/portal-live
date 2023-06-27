@@ -1,4 +1,4 @@
-# Wallet Issuance
+# Wallet Issuance-old
 
 Wallet issuance in BankEzy is a modular registration process where the users have the option to skip few of the steps in the Customer onboarding journey. BankEzy platform provides a seamless customer experience to enable for quick payments post registration.&#x20;
 

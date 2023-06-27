@@ -1,30 +1,32 @@
 ---
-description: The API is intended to receive the credit request from gateway.
+description: >-
+  This API will be invoked by Gateway Server to process credit payment request
+  for the qr payment transaction.
 ---
 
-# Customer Credit-Gateway
+# Payment - Receive Money
 
 
 
-{% swagger method="post" path="" baseUrl="<domain>/ v1/payment/payout" summary="" %}
+{% swagger method="post" path=" " baseUrl="/ v1/payment/payout" summary="" %}
 {% swagger-description %}
-· Invoke Account MS limit consumption validation api to validate the consumption limit
-
-· If consumption limit is success, Invoke Account MS credit Api via rest call to perform credit transaction
-
-· Invoke the Onboarding service to fetch the user profile details by passing BankEZY account no.
-
-· Fetch the email details, mobile no from user profile info to create the Notification Request object
-
-· Invoke the notification service api to send the notification to Payout receiver
+· Invoke Account MS limit consumption validation api to validate the consumption limit and credit payment is processed.
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="x-program-id" required="true" type="String" %}
-program id
+{% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
+MOB-APP-1111
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="x-account-number" required="true" type="String" %}
-customer id
+{% swagger-parameter in="header" name="X-API-TOKEN" required="true" type="String" %}
+Token got from the 
+
+[login API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
+
+ or 
+
+[Get Token API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Amount" required="true" type="String" %}
@@ -229,8 +231,8 @@ curl --location --request POST 'http://localhost:2442/payments/v1/payment/payout
 {% tab title="Response Body" %}
 ```json
 {
-    "resCode":200,
-    "resDesc":SUCCESS
+    "resCode":"200",
+    "resDesc":"SUCCESS"
 }
 ```
 {% endtab %}

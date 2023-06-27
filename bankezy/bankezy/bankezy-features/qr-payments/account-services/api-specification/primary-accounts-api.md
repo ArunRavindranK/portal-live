@@ -1,22 +1,32 @@
 ---
-description: This API is used to set an account as the Primary Account for a User.
+description: >-
+  QR Payment End Users use these API to set a Primary account for the SDK/App
+  User to perform payment transaction.
 ---
 
 # Primary Accounts API
 
 
 
-{% swagger method="post" path="" baseUrl="http://localhost:8911/account/v1/accounts/primaryAccounts" summary="" %}
+{% swagger method="post" path="/primaryAccounts" baseUrl="/v1/accounts" summary="API sets an primary account for an QR Payment user." %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="X-PROGRAM-ID" required="true" type="String" %}
-program id
+{% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
+MOB-APP-1111
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="CUSTOMER-ID" required="true" %}
-customer id
+{% swagger-parameter in="header" name="X-API-TOKEN" required="true" %}
+token got from the 
+
+[login API](../../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
+
+ or 
+
+[Get Token API](../../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="AccountId" required="true" type="String" %}
@@ -48,7 +58,7 @@ Account id for new Primary Account
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Account" type="Json" %}
-user_account_details Json
+user_account_details 
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Sucess, Updated User's Primary Account" %}
@@ -93,9 +103,9 @@ user_account_details Json
 {% endswagger %}
 
 <table><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td><pre><code>ACT_400
-</code></pre></td><td><pre><code>BadRequest
-</code></pre></td><td></td></tr><tr><td><pre><code>ACT_501
-</code></pre></td><td><pre><code>Failed to map request body to UserAccounts
+</code></pre></td><td><pre><code>BadRequest Validaton Erroruest
+</code></pre></td><td></td></tr><tr><td><pre><code>ACT_500
+</code></pre></td><td><pre><code> Internal Server Error
 </code></pre></td><td></td></tr><tr><td><pre><code>200
 </code></pre></td><td><pre><code>SUCCESS
 </code></pre></td><td></td></tr></tbody></table>
@@ -103,7 +113,7 @@ user_account_details Json
 {% tabs %}
 {% tab title="Sample Curl" %}
 ```
-curl --location --request POST 'http://localhost:8911/account/v1/accounts/primaryAccounts' \
+curl --location --request POST 'http://wibmo.com/account/v1/accounts/primaryAccounts' \
 --header 'CUSTOMER-ID: 23234' \
 --header 'X-PROGRAM-ID: 1111' \
 --header 'Content-Type: application/json' \
@@ -157,7 +167,7 @@ curl --location --request POST 'http://localhost:8911/account/v1/accounts/primar
 {% tab title="Response Body" %}
 ```json
 {
-    "resCode": 200,
+    "resCode": "200",
     "resDesc": "Updated User's Primary Account"
 }
 ```

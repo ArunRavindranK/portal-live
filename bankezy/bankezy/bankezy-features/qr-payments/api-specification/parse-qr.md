@@ -1,16 +1,22 @@
 ---
 description: >-
-  The API is intended to read and validate the QR string. Parse and validate the
-  QR string according to the configuration
+  The API is used to parse and validate the different types of QR string based
+  on QR configuration.
+coverY: 0
 ---
 
 # Parse QR
 
+Following are the features supported:
+
+1. Supports Bharat QR, UPI QR and PHQR format parsing based on QR type configuration.
+2. Support parsing of Static and Dynamic QR code for different types based on configuration
 
 
-{% swagger method="post" path="   " baseUrl="<domain> /qrTxn/v1/qr-detail" summary="" %}
+
+{% swagger method="post" path="   " baseUrl="/v1/qr-detail" summary="" %}
 {% swagger-description %}
-A QR String is passed in the request body, the qr parser identifies the QR format and validate the QR. In case of validation error in raw string, application will return invalid exception
+Parse and validate the QR string passed in the request. In case of validation error in raw string, application will return invalid exception
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
@@ -20,11 +26,11 @@ MOB-APP
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" type="String" %}
 The token got from the 
 
-[login API](../../wallet/wallet-issuance/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
+[login API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
 
  or 
 
-[Get Token API](../../wallet/wallet-issuance/customer-on-boarding/common-apis/get-app-token-api.md)
+[Get Token API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
 
 
 {% endswagger-parameter %}
@@ -62,11 +68,15 @@ text/json
 {% endswagger-response %}
 {% endswagger %}
 
-| Error code | Description         |
-| ---------- | ------------------- |
-| 200        | Success             |
-| 100        | Invalid input value |
-| 101        | Parser not found    |
+
+
+| Error code | Description              |
+| ---------- | ------------------------ |
+| 200        | Success                  |
+| 100        | Invalid Input Fields     |
+| 101        | QR Format not supported. |
+
+
 
 {% tabs %}
 {% tab title="Sample Curl" %}

@@ -1,22 +1,37 @@
 ---
-description: This API is used to fetch the list of accounts for managing linked accounts
+description: >-
+  This Api is used for managing/fetching user linked accounts for QR payments.
+  API provides following features.
 ---
 
 # Fetch Accounts API
 
+
+
+1. By Passing type as "All", Api is used to fetch list of available user accounts from CBS Partner and display list of Available accounts & linked accounts to amend user linked accounts.
+2. By Passing type as "Linked" ,To fetch list of user linked accounts for QR Payments.&#x20;
+
 <figure><img src="../../../../../../.gitbook/assets/fetchAccounts flow diagram.png" alt=""><figcaption></figcaption></figure>
 
-{% swagger method="post" path="" baseUrl="http://localhost:9911/account/v1/accounts/{accountType}" summary="" %}
+{% swagger method="post" path=" " baseUrl="account/v1/accounts/{type}" summary="To fetch user linked accounts & all accounts to amend linked accounts. " %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="X-PROGRAM-ID" required="true" type="String" %}
-program id
+{% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
+MOB-APP-1111
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="CUSTOMER-ID" required="true" type="String" %}
-customer id
+{% swagger-parameter in="header" name="X-API-TOKEN" required="true" type="String" %}
+token got from the 
+
+[login API](../../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
+
+ or 
+
+[Get Token API](../../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="accountType" required="true" %}

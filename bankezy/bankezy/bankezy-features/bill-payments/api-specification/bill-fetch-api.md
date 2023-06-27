@@ -4,7 +4,7 @@ description: To fetch the amount to be paid by customer
 
 # Bill Fetch API
 
-{% swagger method="post" path="/" baseUrl="<domain>/retail-service/bill/v1/billpay/billfetch" summary="To fetch the amount to be paid by customer" %}
+{% swagger method="post" path="" baseUrl="<domain>/retail-service/bill/v1/billpay/billfetch" summary="To fetch the amount to be paid by customer" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -24,7 +24,7 @@ Initiating channel IMEI Number
 {% swagger-parameter in="header" name="X-API-TOKEN" type="String" required="true" %}
 The token got from the 
 
-[Get Token API](../../market-place/api-specification/get-token-api.md)
+[Get Token API](../../market-place/api-specification/version-1/get-token-api.md)
 
 
 {% endswagger-parameter %}
@@ -101,6 +101,8 @@ text/plain
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+## Response Details
 
 | Response Body     | Data Type | Field Description                                                                                                                                                                                      |
 | ----------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

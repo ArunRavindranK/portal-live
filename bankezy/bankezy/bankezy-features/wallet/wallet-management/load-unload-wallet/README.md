@@ -4,7 +4,7 @@ For Loading funds into wallet, there are 2 steps. First, we need to capture fund
 
 For Banks/Merchants/Fintechs/NBFCs who wish to fully take care of the capturing of funds, they can only consume the load money API from BankEzy which will load the funds into user's wallet card. Wallet Pool account prefunding will be required in such scenarios.
 
-The below diagram explains the load money flow. Payment process flow used in load/unload wallet can be referred [here](../../../payment/).
+The below diagram explains the load money flow. Payment process flow used in load/unload wallet can be referred [here](../../../internal-api-not-to-publish/payment-old/).
 
 <figure><img src="../../../../../../.gitbook/assets/BankEzy Add Money Flows.png" alt=""><figcaption></figcaption></figure>
 

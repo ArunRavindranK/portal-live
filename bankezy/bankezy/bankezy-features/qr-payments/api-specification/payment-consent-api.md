@@ -1,22 +1,40 @@
 ---
-description: This API is used by App to obtain consent for the  payment transaction
+description: >-
+  This API is used by App to initiate the consent request for the payment
+  transaction. On successful transaction initiation, OTP validation happens if
+  authentication is enabled.
 ---
 
 # Payment Consent API
 
-.
+Features supported by this API:
 
-{% swagger method="post" path="" baseUrl="<domain>/v1/payment/consent" summary="" %}
+1. Supports transaction consent request for P2P (Person to person), P2M(Person to Merchant) and P2B(Person to Biller).
+2. Open Banking API Standards are followed.
+
+
+
+
+
+{% swagger method="post" path=" " baseUrl="/v1/payment/consent" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="X-API-KEY" required="true" type="String" %}
-program id
+MOB-APP-1111
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-API-TOKEN" required="true" type="String" %}
-customer id
+The token got from the 
+
+[login API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/api-specification/authentication-and-authorization/login-api.md)
+
+ or 
+
+[Get Token API](../../wallet/wallet-issuance/wallet-creation/api-specification/version-1/customer-on-boarding/common-apis/get-app-token-api.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="Amount" required="true" type="String" %}

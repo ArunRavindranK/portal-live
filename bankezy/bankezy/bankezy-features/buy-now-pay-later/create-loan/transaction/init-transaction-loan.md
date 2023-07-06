@@ -1,12 +1,12 @@
 ---
 description: >-
-  This API is used for creating loan for user purchases. A purchase involves the
-  acquisition of goods or services in exchange for a payment in credit.
+  API validates the BNPL transaction with respect to Merchant, product and
+  amount and based on OTP configuration, authentication is initiated.
 ---
 
-# Transaction  / Loan
+# Init Transaction  / Loan
 
-{% swagger method="post" path="/lending/v1/txn/bnpl" baseUrl="<domain>" summary="" %}
+{% swagger method="post" path="/v1/txn/initBnpl" baseUrl="<domain>" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -18,7 +18,7 @@ value will be pre-shared with consumer
 {% swagger-parameter in="header" name="X-API-TOKEN" type="String" required="true" %}
 The token got from the 
 
-[Get Token API](../../market-place/api-specification/version-1/get-token-api.md)
+[Get Token API](../../../market-place/api-specification/version-1/get-token-api.md)
 
 
 {% endswagger-parameter %}
@@ -82,36 +82,46 @@ Product Identifier
 
 {% tabs %}
 {% tab title="Sample Curl Request" %}
-<pre><code>curl --location --request POST 'https://user4.pcdev.enstage-sas.com/kong/lending/v1/txn/bnpl' \
+```
+curl --location 'https://user4.pcdev.enstage-sas.com/kong/lending/v1/txn/initBnpl' 
 --header 'X-API-KEY: MOB-APP' \
---header 'X-API-TOKEN: &#x3C;REPLACE_WITH_TOKEN_FROM_GET_TOKEN_API_RESPONSE>' \
-<strong>--header 'X-ACCOUNT-NUMBER: 102' \
-</strong><strong>--data-raw '{
-</strong>  "amount": 20.00,
-  "merchantId": 5,
-  "productId":2
+--header 'X-API-TOKEN: <REPLACE_WITH_TOKEN_FROM_GET_TOKEN_API_RESPONSE>' \
+ --data '{
+
+  "amount": 500,
+
+  "merchantId": 76,
+
+  "productId": 323
+
 }'
-</code></pre>
+```
 {% endtab %}
 
 {% tab title="Request Example" %}
 ```json
-{ 
-    "amount": 20.00, 
-    "merchantId": 0, 
-    "productId": 2 
+{
+
+  "amount": 500,
+
+  "merchantId": 76,
+
+  "productId": 323
+
 }
 ```
 {% endtab %}
 
 {% tab title="Response Example" %}
-<pre class="language-json"><code class="lang-json">{ 
-"resCode": "LND_2001", 
-"resDesc": "SUCCESS", 
-"data": { 
-<strong>    "txnRefNum": "83483483438" 
-</strong>}
-</code></pre>
+```json
+{
+    "resCode": "LND200",
+    "resDesc": "SUCCESS",
+    "data": {
+        "otpRequired": "N"
+    }
+}
+```
 {% endtab %}
 {% endtabs %}
 
@@ -121,15 +131,16 @@ Product Identifier
 | ------------- | --------- | ---------------------------- |
 | resCode       | String    | Response Code                |
 | resDesc       | String    | Response Description         |
-| txnRefNum     | String    | Transaction Reference Number |
+| otpRequired   | String    | returns otp required or not  |
 
 ### Custom Response Codes
 
 | Response Codes | Response Description                                  |
 | -------------- | ----------------------------------------------------- |
-| LND024         | INVALID PRODUCT                                       |
-| LND025         | INVALID AMOUNT                                        |
-| LND026         | INVALID\_MERCHANT                                     |
-| LND027         | NO LIMIT                                              |
-| LND028         | INSUFFICIENT AMOUNT                                   |
+| LND024         | Invalid Product                                       |
+| LND025         | Invalid Amount                                        |
+| LND026         | Merchant Invalid                                      |
+| LND027         | Limit exhausted                                       |
+| LND028         | Insufficient Amount                                   |
 | LND009         | There seems to be a technical issue. Try again later. |
+| LND022         | User account does not exist                           |

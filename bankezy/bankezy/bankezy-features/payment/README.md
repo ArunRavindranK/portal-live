@@ -19,7 +19,7 @@ The below sequence diagram represents the two kinds of integration supported in 
 
 ## Non QR transaction:
 
-1. Use[ **Load Money Init API**](../wallet/wallet-transactions/api-specification/version-2/load-unload-wallet/api-specification/load-money-initiation-api.md) to initiate load funds to wallet and [**Recharge Validate Init API**](../bill-payments/api-specification/validation-init-api.md) to initiate recharge/bill payments.
+1. Use[ **Load Money Init API**](../wallet/wallet-transactions/api-specification/version-2/load-unload-wallet/api-specification/load-money-initiation-api.md) to initiate load funds to wallet and [**Recharge Validate Init API**](../bill-payments/common-api/version-1/validation-init-api.md) to initiate recharge/bill payments.
 2. Initiate [**Payment Txn Init API**](api-specification/payment/version-2/payment-initiation-api.md) to get the required the configured payment route and to fetch merchant info needed for SDK approach.
 3. Refer the Payment - API Based, Payment - SDK Based and Payment - Redirect sections for the transaction flow based on the pgImplementation mode.
-4. Use [**Load Auth Update API**](../wallet/wallet-transactions/api-specification/version-2/load-unload-wallet/api-specification/authentication-status-update-api.md) to update the status of load funds to wallet, [**Recharge Auth Update API**](../bill-payments/api-specification/recharge-request-api.md) to update the status of recharge/bill payments.
+4. Use [**Load Auth Update API**](../wallet/wallet-transactions/api-specification/version-2/load-unload-wallet/api-specification/authentication-status-update-api.md) to update the status of load funds to wallet, [**Recharge Auth Update API**](../bill-payments/recharge/version-v1/recharge-request-api.md) to update the status of recharge/bill payments.

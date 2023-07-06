@@ -42,7 +42,7 @@ BNPL Transaction and Repayment
 
 * Once the Limit is Set, User can do the BNPL transaction&#x20;
 * If the user is availing for the benefits of loan with a merchant for the first time, additional authentication to be taken from the user. In order to identify if additional authentication of the user is needed for that specific merchant, **Init Loan API** can be used.
-* Transaction is initiated with [Transaction/Loan](create-loan/transaction-loan.md) API
+* Transaction is initiated with [Transaction/Loan](create-loan/transaction/transaction-loan-paylater.md) API
 * Loan Reference ID and payment date is provided to the user.
 * Bill details are fetched from the LMS, User can get the bill details using [Bill Fetch ](loan-repayment/bill-fetch.md)API
 * Payment for un-billed/billed amount can be done using [Bill Payment Init ](loan-repayment/bill-payment-init.md)API

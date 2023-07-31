@@ -1,17 +1,15 @@
 # Wallet Management
 
-This section covers the APIs for the wallet management features like blocking/unblocking wallet,  Fetch & Update user profile, Link Debit/Credit Cards, Beneficiary management for wallet to account transfers and to set recurring payments to load wallet, if the wallet balance falls below the threshold.&#x20;
+This section covers the APIs for the wallet management features like blocking/unblocking wallet, Fetch & Update user profile, Link Debit/Credit Cards, Beneficiary management for wallet to account transfers and to set recurring payments to load wallet, if the wallet balance falls below the threshold.
 
-&#x20;
-
-<figure><img src="../../../../.gitbook/assets/Wallet management (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Wallet%20management%20(2).png" alt=""><figcaption></figcaption></figure>
 
 ## Card Management:
 
 1. Call [**Payment Params API**](../payment/api-specification/payment/version-2/payment-param-api.md) to get the configured route for card management
 2. If the pgImplementation mode is SDK, refer [**Generate Hash API**](../payment/api-specification/payment/version-2/hash-init-api.md) to fetch, add and delete cards
-3. Call [**Consent API**](../payment/api-specification/payment/version-2/consent-api.md) in order to tokenise cards
-4. Refer [**Card Link API**](wallet-management/api-specification/version-2/card-management/wallet-link/api-specification/link-card-api.md) to link a debit/credit card&#x20;
+3. Call [**Consent API**](../payment/api-specification/payment/version-1/consent-api.md) in order to tokenise cards
+4. Refer [**Card Link API**](wallet-management/api-specification/version-2/card-management/wallet-link/api-specification/link-card-api.md) to link a debit/credit card
 5. To fetch the payment instrument linked to the user account, refer [**Fetch Accounts API**](wallet-management/api-specification/version-2/card-management/wallet-link/api-specification/fetch-linkedcards-api.md)
 6. To update the Nick name of the card linked, refer [**Update Card Name API**](wallet-management/api-specification/version-2/card-management/wallet-link/api-specification/update-nickname-api.md)
 7. To unlink the cards, use [**Unlink Card API**](wallet-management/api-specification/version-2/card-management/wallet-link/api-specification/unlink-card-api.md)
@@ -41,7 +39,5 @@ The below section defines the API's to block/unblock the user's own wallet and t
 3. User wants to restrict collect request being received from a particular user, refer [**Block Collect Request API**](wallet-management-new/api-specification/version-2/block-unblock-wallet/api-specification/blocked-mobile-number-list-api.md)
 4. To unblock a particular user in order to receive collect request, refer [**UnBlock Collect Request API**](wallet-management/api-specification/version-2/wallet-management/api-specification/unblock-mobile-number-api.md)
 5. To view the list of blocked users, refer [**Blocked User List API**](wallet-management/api-specification/version-2/wallet-management/api-specification/blocked-mobile-number-list-api.md)
-
-
 
 *

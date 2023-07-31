@@ -4,7 +4,7 @@ Authentication for the tokenized cards performed with the token instead of the o
 
 Authentication using Token Flow
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (1).png>)
 
 * For purchase transaction, merchant sends authentication transaction to MPI / 3DSS.
 * MPI Sends the request to DS. DS connects card network to detokenize the card number.

@@ -18,7 +18,7 @@ Before you proceed ahead with understanding and testing these APIs, below showca
 
 ### Prepaid Platform - In a snapshot:
 
-![Click on the image to expand](<../.gitbook/assets/Aero- In a snapshot (4).png>)
+![Click on the image to expand](<../.gitbook/assets/Aero- In a snapshot (4) (1).png>)
 
 {% hint style="info" %}
 Coming Soon: Provide the convenience of interoperability of prepaid wallet through UPI handle (in India). With this, you can now send and receive money stored in your Prepaid Platform powered digital wallet to your friends, family and merchant’s wallets (Same or different wallet) using UPI handles. An experience as seamless and akin to existing UPI transactions made from your Savings Bank Account to their Savings Bank Account.

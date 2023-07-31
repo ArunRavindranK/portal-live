@@ -2,7 +2,7 @@
 
 Bankezy application supports biometric authentication while registration or after login.
 
-When user is opted for biometric authentication, App will call [Public key Api](public-key-api.md) to generate RSA and AES keys for one user on one device. If user changes device then again app will call public key api to generate RSK key for the new device.
+When user is opted for biometric authentication, App will call [Public key Api](broken-reference) to generate RSA and AES keys for one user on one device. If user changes device then again app will call public key api to generate RSK key for the new device.
 
 After generating keys, server will return public and AES key to the app, private key will be saved at server end.
 

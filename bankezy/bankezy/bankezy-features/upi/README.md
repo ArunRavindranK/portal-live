@@ -14,6 +14,8 @@ BankEzy platform supports issuer UPI features. Following are the features suppor
 
 Below diagram explain the UPI registration flow
 
+<figure><img src="../../../../.gitbook/assets/UPI%20PPI%20-%20UPI%20Registration%20(1).png" alt=""><figcaption></figcaption></figure>
+
 <figure><img src="../../../../.gitbook/assets/UPI PPI - UPI Registration (1).png" alt=""><figcaption></figcaption></figure>
 
 1. The registration status of the user shall be verified by [**UPI Registration Status Inquiry API**](registration/version-2/upi-registration-status-inquiry-api.md).
@@ -21,11 +23,11 @@ Below diagram explain the UPI registration flow
 3. App to send the SMS token to specific number.
 4. Post sending the SMS, App will initiate the [**Device Binding API**](registration/version-2/device-binding-api.md)
 5. The status of the device binding can be verified using [**UPI Registration Polling API**](registration/version-2/polling-api.md)
-6. Incase to abort the registration process,  [**Decline Device Binding API** ](registration/version-2/decline-device-binding-api.md)can be used.
+6. Incase to abort the registration process, [**Decline Device Binding API** ](registration/version-2/decline-device-binding-api.md)can be used.
 
 Below diagram explains the UPI transaction flow
 
-<figure><img src="../../../../.gitbook/assets/UPI PPI - UPI Transaction (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/UPI%20PPI%20-%20UPI%20Transaction%20(3).png" alt=""><figcaption></figcaption></figure>
 
 1. The VPA of the user can be verified using [**Verify VPA API**](payments/version-2/verify-vpa-api.md)
 2. User will be able to send and receive money using [**Send Money API**](../wallet/wallet-transactions/api-specification/version-2/wallet-to-account/api-specification/send-money-api.md)
@@ -49,8 +51,3 @@ Following are the features related to dispute management
 2. Raise a complaint using [**Register Compliant**](dispute-management/api-specification/version-2/register-complaint.md) API
 3. To check the status of the raised complaint, [**Check Status**](dispute-management/api-specification/version-2/check-status.md) API to be used.
 4. To view the list of disputes raised, [**Fetch**](dispute-management/api-specification/version-2/fetch-api.md) API can be used.
-
-
-
-
-
